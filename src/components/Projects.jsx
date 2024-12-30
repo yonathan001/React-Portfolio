@@ -1,11 +1,12 @@
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
+
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 const Projects = () => {
   const projects = [
     {
       title: 'CMS - Clinic Management System',
-      description: 'The CMS system eliminates paperwork from reception to doctors, streamlining patient records management, and overall workflow, providing a seamless experience for both staff and patients.',
+      description: 'The CMS system eliminates paperwork from reception to doctors, streamlining patient records management, and overall workflow.',
       image: 'https://via.placeholder.com/600x400',
       tags: ['HTML5', 'Tailwind', 'PHP', 'JavaScript', 'MySQL' , 'JSON' ],
       github: '#',
@@ -13,7 +14,7 @@ const Projects = () => {
     },
     {
       title: 'Chapa Payment Gateway Integration with Laravel',
-      description: 'working on integrating the Chapa payment gateway API into my project with #Laravel framework. This integration involved leveraging Laravels powerful features to handle payment transactions seamlessly',
+      description: 'working on integrating the Chapa payment gateway API into my project with #Laravel framework. ',
       image: 'https://via.placeholder.com/600x400',
       tags: ['Laravel', 'Tailwind', 'MySQL'],
       github: 'https://github.com/yonathan001/Chapa_Payment_Laravel',
@@ -21,7 +22,7 @@ const Projects = () => {
     },
     {
       title: 'Ethiopian kidney Patients',
-      description: 'The web application that is specifically developed for kidney patients in Ethiopian. Some features of the wep app is nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
+      description: 'For kidney patients in Ethiopian. Some features:- nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
       image: 'https://via.placeholder.com/600x400',
       tags: ['HTML5', 'Bootstrap', 'JavaScript', 'PHP'],
       github: '#',
