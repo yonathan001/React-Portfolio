@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: 'CMS - Clinic Management System',
       description: 'The CMS system eliminates paperwork from reception to doctors, streamlining patient records management, and overall workflow.',
-      image: 'https://via.placeholder.com/600x400',
+      image: 'src/assets/images/cms.png',
       tags: ['HTML5', 'Tailwind', 'PHP', 'JavaScript', 'MySQL' , 'JSON' ],
       github: '#',
       demo: '#',
@@ -15,7 +15,7 @@ const Projects = () => {
     {
       title: 'Chapa Payment Gateway Integration with Laravel',
       description: 'working on integrating the Chapa payment gateway API into my project with #Laravel framework. ',
-      image: 'https://via.placeholder.com/600x400',
+      image: 'src/assets/images/chapa.png',
       tags: ['Laravel', 'Tailwind', 'MySQL'],
       github: 'https://github.com/yonathan001/Chapa_Payment_Laravel',
       demo: '#',
@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: 'Ethiopian kidney Patients',
       description: 'For kidney patients in Ethiopian. Some features:- nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
-      image: 'https://via.placeholder.com/600x400',
+      image: 'src/assets/images/ekp.png',
       tags: ['HTML5', 'Bootstrap', 'JavaScript', 'PHP'],
       github: '#',
       demo: 'http://ethiopiankp.com',
@@ -31,7 +31,7 @@ const Projects = () => {
     {
       title: 'OTP - One time password verification',
       description: 'Adding One time password verification in Laravel projcet.',
-      image: 'https://via.placeholder.com/600x400',
+      image: 'src/assets/images/otp.png',
       tags: ['Laravel', 'MySQL', 'Tailwind'],
       github: 'https://github.com/yonathan001/OTP-Verification',
       demo: '#',
@@ -39,7 +39,7 @@ const Projects = () => {
     {
       title: 'TODO - TASK MANAGEMENT',
       description: 'Task List app using React.Js, Node.Js, and MongoDB',
-      image: 'https://via.placeholder.com/600x400',
+      image: 'src/assets/images/todo.png',
       tags: ['React', 'Node.js', 'MongoDB', 'Express.js' , 'Tailwind'],
       github: 'https://github.com/yonathan001/MyTask',
       demo: '#',
@@ -47,7 +47,7 @@ const Projects = () => {
     {
       title: 'Portfolio Website',
       description: 'Personal portfolio website to showcase my skills and projects.',
-      image: 'https://via.placeholder.com/600x400',
+      image: 'src/assets/images/portfolio.png',
       tags: ['React', 'Tailwind', 'vite', 'JSX'],
       github: 'https://github.com/yonathan001/React-Portfolio',
       demo: '#',
