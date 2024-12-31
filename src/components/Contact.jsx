@@ -44,6 +44,9 @@ const Contact = () => {
           <a href="mailto:yonathanwondosen@gmail.com" className="btn">
             Say Hello
           </a>
+          <a href="/yonathan-resume.pdf" download className="btn">
+            Download Resume
+          </a>
         </motion.div>
       </div>
     </section>

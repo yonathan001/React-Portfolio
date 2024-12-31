@@ -39,7 +39,7 @@ const Projects = () => {
     {
       title: 'TODO - TASK MANAGEMENT',
       description: 'Task List app using React.Js, Node.Js, and MongoDB',
-      image: 'src/assets/images/todo.png',
+      image: 'src/assets/images/',
       tags: ['React', 'Node.js', 'MongoDB', 'Express.js' , 'Tailwind'],
       github: 'https://github.com/yonathan001/MyTask',
       demo: '#',
