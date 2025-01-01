@@ -22,7 +22,7 @@ const Projects = () => {
     },
     {
       title: 'Ethiopian kidney Patients',
-      description: 'For kidney patients in Ethiopian. Some features:- nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
+      description: 'For kidney patients in Ethiopian. Fetaures: Nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
       image: 'src/assets/images/ekp.png',
       tags: ['HTML5', 'Bootstrap', 'JavaScript', 'PHP'],
       github: '#',
@@ -65,7 +65,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="section-title text-center mb-16">Featured Projects</h2>
+          <h2 className="section-title text-center mb-16">Featured Projects 2024</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
