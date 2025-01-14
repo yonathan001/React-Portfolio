@@ -1,5 +1,6 @@
+import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
+
 import { motion } from 'framer-motion';
-import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
 
 const Contact = () => {
   return (
@@ -40,13 +41,18 @@ const Contact = () => {
             >
               <FiLinkedin size={24} />
             </a>
+
+            <a
+              href="https://www.instagram.com/yo_na_th_an/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-textSecondary hover:text-secondary transition-colors"
+            >
+              <FiInstagram size={24} />
+            </a>
           </div>
-          <a href="mailto:yonathanwondosen@gmail.com" className="btn">
-            Say Hello
-          </a>
-          <a href="/yonathan-resume.pdf" download className="btn">
-            Download Resume
-          </a>
+          
+          
         </motion.div>
       </div>
     </section>

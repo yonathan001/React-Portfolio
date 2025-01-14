@@ -1,30 +1,32 @@
-import { motion } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { FiStar } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const Testimonials = () => {
   const testimonials = [
     {
       name: 'Dr. Esete Getachew',
       position: 'CEO & Founder of Ethiopian Kidney Care | NGO',
-      image: 'https://via.placeholder.com/80', // Replace with actual image
+      image: 'assets/images/es.JPG', 
       content: ' I’m so impressed by your problem-solving skills. I look forward to working with you',
       rating: 5,
     },
     {
       name: 'Biruktawit Taye',
       position: 'Owner of " የእለት / yelet" Design',
-      image: 'https://via.placeholder.com/80', // Replace with actual image
+      image: 'assets/images/bi.PNG', 
       content: 'Working with you was a pleasure. You turned my ideas into reality with skill and precision.',
       rating: 5,
     },
     {
       name: 'Dr. Wendatir Getaneh',
       position: 'Owner of BENA Dental clinic',
-      image: 'https://via.placeholder.com/80', // Replace with actual image
+      image: 'assets/images/wo.PNG', 
       content: 'Your ability to understand my needs and deliver exactly what I wanted is commendable. Thank you!',
       rating: 5,
     },

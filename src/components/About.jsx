@@ -1,21 +1,19 @@
-import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiInstagram, FiTwitter } from 'react-icons/fi';
-import { 
-  SiJavascript, 
-  SiReact, 
-  SiNodedotjs, 
-  SiTypescript, 
-  SiTailwindcss, 
-  
+import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import {
   SiGit,
-  
+  SiJavascript,
   SiLaravel,
-  SiPhp,
-  SiMysql,
   SiMongodb,
-  SiPostman
-  
+  SiMysql,
+  SiNodedotjs,
+  SiPhp,
+  SiPostman,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript
 } from 'react-icons/si';
+
+import { motion } from 'framer-motion';
 
 const About = () => {
   const skills = [
