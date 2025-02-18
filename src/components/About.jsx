@@ -108,10 +108,10 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-4">My Profile</h3>
                 <div className="space-y-4 text-textSecondary">
                   <p>
-                  Hello👋! My Name is Yonathan Wondosen, I'm full stack software developer in Ethiopia since 2020. I am working more with Laravel(php), React.js, SQL and NO-SQL, Tailwind and Bootstrap. Expertise in web applications. 
+                  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I primarily work with Laravel (PHP), React.js, SQL, NoSQL, Tailwind, and Bootstrap. My expertise lies in web applications that are efficient and user-friendly.
                   </p>
                   <p>
-                  I also update and learn my self with new tech stacks. I love to create beautiful and performant products with delightful user experiences and efficiency.
+                  I constantly update my skills and explore new technologies to stay ahead in the ever-evolving tech landscape. I have a strong passion for problem-solving and a deep dedication to my work. Building high-performance digital solutions that enhance user experience and drive efficiency is always a priority.
                   </p>
                  
                 </div>
