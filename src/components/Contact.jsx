@@ -15,7 +15,7 @@ const Contact = () => {
         >
           <h2 className="section-title">Get In Touch</h2>
           <p className="text-textSecondary mb-8">
-            I'm currently looking for new opportunities. Whether you have a question
+            I'm  looking for new opportunities. Whether you have a question
             or just want to say hi, I'll try my best to get back to you!
           </p>
           <div className="flex justify-center gap-8 mb-8">

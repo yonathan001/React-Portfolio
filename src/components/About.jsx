@@ -34,10 +34,10 @@ const About = () => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: FiGithub, link: 'https://github.com/YonathanWondosen' },
+   
     { name: 'LinkedIn', icon: FiLinkedin, link: 'https://www.linkedin.com/in/yonathan-wondosen-a025bb239/' },
     { name: 'Instagram', icon: FiInstagram, link: 'https://www.instagram.com/yo_na_th_an/' },
-    
+    { name: 'GitHub', icon: FiGithub, link: 'https://github.com/YonathanWondosen' },
   ];
 
   return (
