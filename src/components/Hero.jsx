@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import { FiDownload } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const handleDownloadCV = () => {
@@ -73,7 +73,7 @@ const Hero = () => {
               >
                 <p className="text-textSecondary text-sm mb-4">Specialized </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  {['React','Laravel','Tailwind','WebApplication'].map((tech, index) => (
+                  {['React','Laravel','Django','Tailwind'].map((tech, index) => (
                     <span
                       key={tech}
                       className="px-4 py-2 rounded-lg bg-primary-light text-textSecondary text-sm

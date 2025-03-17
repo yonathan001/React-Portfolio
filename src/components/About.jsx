@@ -1,16 +1,17 @@
 import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import {
+  SiDjango,
   SiGit,
   SiJavascript,
   SiLaravel,
   SiMongodb,
   SiMysql,
-  SiNodedotjs,
   SiPhp,
+  SiPostgresql,
   SiPostman,
+  SiPython,
   SiReact,
-  SiTailwindcss,
-  SiTypescript
+  SiTailwindcss
 } from 'react-icons/si';
 
 import { motion } from 'framer-motion';
@@ -20,9 +21,12 @@ const About = () => {
     { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-400' },
     { name: 'React', icon: SiReact, color: 'text-blue-400' },
     { name: 'Laravel', icon: SiLaravel, color: 'text-red-500' },
+    { name: 'Python', icon: SiPython, color: 'text-blue-700' },
+    { name: 'Django', icon: SiDjango, color: 'text-green-700' },
     { name: 'PHP', icon: SiPhp, color: 'text-blue-400' },
     { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
-    { name: 'MySQL', icon: SiMysql, color: 'text-blue-300' },
+    { name: 'MySQL', icon: SiMysql, color: 'text-blue-400' },
+    { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400' },
     { name: 'Git', icon: SiGit, color: 'text-red-500' },
     { name: 'Postman', icon: SiPostman, color: 'text-orange-500' },
     { name: 'MongoDB', icon: SiMongodb, color: 'text-green-400' },

@@ -21,14 +21,6 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: ' Kidney Patient Support Application',
-      description: 'For a kidney patients in Ethiopian. Fetaures: Nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
-      image: 'assets/images/ekp.png',
-      tags: ['HTML5', 'Bootstrap', 'JavaScript', 'PHP'],
-      github: '#',
-      demo: 'http://ethiopiankp.com',
-    },
-    {
       title: 'OTP - One time password verification',
       description: 'Adding One time password verification in Laravel project.',
       image: 'assets/images/otp.png',
@@ -36,6 +28,16 @@ const Projects = () => {
       github: 'https://github.com/yonathan001/OTP-Verification',
       demo: '#',
     },
+    
+    {
+      title: ' Kidney Patient Support Application',
+      description: 'For a kidney patients in Ethiopian. Fetaures: Nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
+      image: 'assets/images/ekp.png',
+      tags: ['HTML5', 'Bootstrap', 'JavaScript', 'PHP'],
+      github: '#',
+      demo: 'http://ethiopiankp.com',
+    },
+   
     
     {
       title: 'Portfolio Website',
