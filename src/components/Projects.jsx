@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
-      title: 'CMS - Clinic Management System',
-      description: 'The CMS system eliminates paperwork from reception to doctors, streamlining patient records management, and overall workflow.',
+      title: 'EMR - Electronic Medical Record System',
+      description: 'The Clinic Management system eliminates paperwork from reception to doctors, streamlining patient records management, and overall workflow.',
       image: 'assets/images/cms.png',
-      tags: ['HTML5', 'Tailwind', 'PHP', 'JavaScript', 'MySQL' , 'JSON' ],
+      tags: ['HTML', 'Tailwind', 'Laravel PHP', 'JavaScript', 'JSON','MySQL' ],
       github: '#',
       demo: '#',
     },
