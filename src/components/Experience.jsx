@@ -15,7 +15,7 @@ const Experience = () => {
         'Implemented new features that increased user engagement in existing web applications',
         
       ],
-      skills: ['Technology', 'Development ', 'Managment', 'Team Work', 'Web Application '],
+      skills: ['Technology', 'Development ', 'Management', 'Team Work', 'Web Application '],
     },
 
     {
@@ -37,7 +37,7 @@ const Experience = () => {
       location: 'Addis Ababa, Ethiopia',
       duration: 'Dec 2020 - Present',
       description: [
-        'Worked on various freelance projects, including e-commerce websites, landing pages, and custom web applications.',
+        'Worked on various freelance projects, including E-commerce websites, Landing Pages, Electronic medical record (EMR) Systems and custom web applications.',
         
    
       ],
