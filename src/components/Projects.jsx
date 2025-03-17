@@ -21,7 +21,7 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: ' Patient Support Application',
+      title: ' Kidney Patient Support Application',
       description: 'For a kidney patients in Ethiopian. Fetaures: Nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
       image: 'assets/images/ekp.png',
       tags: ['HTML5', 'Bootstrap', 'JavaScript', 'PHP'],
