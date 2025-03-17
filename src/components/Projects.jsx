@@ -13,7 +13,7 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: 'Chapa Payment Gateway Integration with Laravel',
+      title: 'Chapa Payment Gateway Integration in Laravel',
       description: 'working on integrating the Chapa payment gateway API into my project with #Laravel framework. ',
       image: '../assets/images/chapa.png',
       tags: ['Laravel', 'Tailwind', 'MySQL'],
@@ -21,8 +21,8 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: 'Ethiopian kidney Patients',
-      description: 'For kidney patients in Ethiopian. Fetaures: Nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
+      title: ' Patient Support Application',
+      description: 'For a kidney patients in Ethiopian. Fetaures: Nearby dialysis center finding, connecting volunteers taxi drivers and patients.',
       image: 'assets/images/ekp.png',
       tags: ['HTML5', 'Bootstrap', 'JavaScript', 'PHP'],
       github: '#',
@@ -30,20 +30,13 @@ const Projects = () => {
     },
     {
       title: 'OTP - One time password verification',
-      description: 'Adding One time password verification in Laravel projcet.',
+      description: 'Adding One time password verification in Laravel project.',
       image: 'assets/images/otp.png',
       tags: ['Laravel', 'MySQL', 'Tailwind'],
       github: 'https://github.com/yonathan001/OTP-Verification',
       demo: '#',
     },
-    {
-      title: 'TASK MANAGEMENT ',
-      description: 'Task List app using React.Js, Node.Js, and MongoDB',
-      image: 'assets/images/todo.png',
-      tags: ['React', 'Node.js', 'MongoDB', 'Express.js' , 'Tailwind'],
-      github: 'https://github.com/yonathan001/MyTask',
-      demo: '#',
-    },
+    
     {
       title: 'Portfolio Website',
       description: 'Personal portfolio website to showcase my skills and projects.',
