@@ -69,7 +69,7 @@ const About = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-center mb-2">Yonathan Wondosen</h3>
-                <p className="text-textSecondary text-center mb-4">Software Developer</p>
+                <p className="text-textSecondary text-center mb-4">Software Engineer</p>
                 <div className="flex justify-center gap-4 mb-6">
                   {socialLinks.map((social, index) => (
                     <a
@@ -112,7 +112,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-4">My Profile</h3>
                 <div className="space-y-4 text-textSecondary">
                   <p>
-                  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I primarily work with Laravel (PHP), React.js, SQL, NoSQL, Tailwind, and Bootstrap. My expertise lies in web applications that are efficient and user-friendly.
+                  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack softwaredeveloper based in Ethiopia. I work extensively with Laravel(PHP), Django(Python), React.js, SQL and NoSQL databases, Tailwind CSS, and Bootstrap. I specialize in building web applications.
                   </p>
                   <p>
                   I constantly update my skills and explore new technologies to stay ahead in the ever-evolving tech landscape. I have a strong passion for problem-solving and a deep dedication to my work. Building high-performance digital solutions that enhance user experience and drive efficiency is always a priority.
