@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
 import { FiBriefcase, FiCalendar } from 'react-icons/fi';
+
+import { motion } from 'framer-motion';
 
 const Experience = () => {
   const experiences = [
@@ -9,24 +10,38 @@ const Experience = () => {
       location: 'Addis Ababa, Ethiopia',
       duration: 'Jun 2024 - Present',
       description: [
-        'Led development of multiple high-impact projects with Technology ',
-        'Managed a team of Social media marketers.',
+        'Managing IT Department',
+        'Development of multiple high-impact projects with Technology ',
         'Implemented new features that increased user engagement in existing web applications',
         
       ],
-      skills: ['Technology', 'Managment', 'Team Work', 'Web Application '],
+      skills: ['Technology', 'Development ', 'Managment', 'Team Work', 'Web Application '],
+    },
+
+    {
+      title: 'Full Stack Software Developer',
+      company: 'EtPayRent',
+      location: 'Addis Ababa, Ethiopia',
+      duration: 'March 2025 - Present',
+      description: [
+        'I am working on Development and Maintenance of the system',
+        'Telebirr and other payment gateways integration',
+        'Conducting relevant research and data gathering',
+   
+      ],
+      skills: ['React', 'API', 'JSON' , 'Tailwind', 'Spring Boot', 'Java' ],
     },
     {
-      title: 'Freelance Developer',
-      company: 'upwork & local companies',
+      title: 'Software Developer',
+      company: 'Freelancing for local companies',
       location: 'Addis Ababa, Ethiopia',
       duration: 'Dec 2020 - Present',
       description: [
         'Worked on various freelance projects, including e-commerce websites, landing pages, and custom web applications.',
-        'Specialized in using Laravel for backend development and React for frontend.',
+        
    
       ],
-      skills: ['React', 'Laravel', 'MYSQL', 'PHP', 'Javascript' , 'Tailwind', 'Git', 'MongoDB'],
+      skills: ['React', 'Laravel','Python', 'Django', 'MYSQL', 'PHP', 'Javascript' , 'Tailwind', 'Git', 'PostgreSQL'],
     },
     
   ];

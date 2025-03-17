@@ -15,7 +15,7 @@ const Projects = () => {
     {
       title: 'Chapa Payment Gateway Integration with Laravel',
       description: 'working on integrating the Chapa payment gateway API into my project with #Laravel framework. ',
-      image: 'assets/images/chapa.png',
+      image: '../assets/images/chapa.png',
       tags: ['Laravel', 'Tailwind', 'MySQL'],
       github: 'https://github.com/yonathan001/Chapa_Payment_Laravel',
       demo: '#',
