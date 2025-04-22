@@ -65,11 +65,15 @@ const About = () => {
                 <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-secondary/20">
                   {/* Add your profile image here */}
                   <div className="w-full h-full flex items-center justify-center text-secondary">
-                    YN {/* Replace with your initials or image */}
+                  <img
+  src="assets/images/me.png" // or use a URL
+  alt="Yonathan Wondosen"
+  className="w-full h-full object-cover"
+/>
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-center mb-2">Yonathan Wondosen</h3>
-                <p className="text-textSecondary text-center mb-4">Software Engineer</p>
+                <p className="text-textSecondary text-center mb-4">Senior Software Engineer</p>
                 <div className="flex justify-center gap-4 mb-6">
                   {socialLinks.map((social, index) => (
                     <a

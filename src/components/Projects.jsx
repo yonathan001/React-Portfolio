@@ -12,6 +12,15 @@ const Projects = () => {
       github: '#',
       demo: '#',
     },
+
+    {
+      title: 'EtPay-Rent - Property Managment System',
+      description: 'Eliminate the headaches of property management for both landlords and tenants. Rent collections and maintenance requests',
+      image: 'assets/images/epr.png',
+      tags: ['React.js', 'Tailwind', 'Java Springboot', 'postgreSQL'],
+      github: '#',
+      demo: '#',
+    },
     {
       title: 'Chapa Payment Gateway Integration in Laravel',
       description: 'working on integrating the Chapa payment gateway API into my project with #Laravel framework. ',
