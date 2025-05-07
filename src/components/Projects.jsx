@@ -29,14 +29,7 @@ const Projects = () => {
       github: 'https://github.com/yonathan001/Chapa_Payment_Laravel',
       demo: '#',
     },
-    {
-      title: 'OTP - One time password verification',
-      description: 'Adding One time password verification in Laravel project.',
-      image: 'assets/images/otp.png',
-      tags: ['Laravel', 'MySQL', 'Tailwind'],
-      github: 'https://github.com/yonathan001/OTP-Verification',
-      demo: '#',
-    },
+   
     
     {
       title: ' Kidney Patient Support Application',
