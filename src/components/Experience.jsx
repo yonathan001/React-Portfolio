@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Cheif Technology Officer',
+      title: 'Cheif Technology Officer (volunteer)',
       company: 'Ethiopian Kidney Care NGO',
       location: 'Addis Ababa, Ethiopia',
       duration: 'Jun 2024 - Present',
@@ -33,7 +33,7 @@ const Experience = () => {
     },
     {
       title: 'Software Developer',
-      company: 'Freelancing for local companies',
+      company: 'Freelancing on Upwork and Local companies',
       location: 'Addis Ababa, Ethiopia',
       duration: 'Dec 2020 - Present',
       description: [

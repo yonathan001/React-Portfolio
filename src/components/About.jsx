@@ -1,4 +1,4 @@
-import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import {
   SiDjango,
   SiGit,
@@ -115,9 +115,10 @@ const About = () => {
               <div className="bg-tertiary rounded-2xl p-8 shadow-xl h-full">
                 <h3 className="text-2xl font-bold mb-4">My Profile</h3>
                 <div className="space-y-4 text-textSecondary">
-                  <p>
-                  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack softwaredeveloper based in Ethiopia. I work extensively with React.js, Laravel(PHP), Django(Python), SQL and NoSQL databases, Tailwind CSS, and Bootstrap. My Expertise lies in web applications that are efficient and user-friendly.
-                  </p>
+                 <p>
+  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with <strong>React.js</strong>, <strong>Django (Python)</strong>, <strong>Laravel (PHP)</strong>, <strong>SQL</strong> and <strong>NoSQL databases</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap</strong>. My expertise lies in web applications that are efficient and user-friendly.
+</p>
+
                   <p>
                   I constantly update my skills and explore new technologies to stay ahead in the ever-evolving tech landscape. I have a strong passion for problem-solving and a deep dedication to my work. Building high-performance digital solutions that enhance user experience and drive efficiency is always a priority.
                   </p>
