@@ -47,6 +47,15 @@ const Projects = () => {
       image: 'assets/images/portfolio.png',
       tags: ['React', 'Tailwind', 'vite', 'JSX'],
       github: 'https://github.com/yonathan001/React-Portfolio',
+      demo: 'https://yonathan.com.et',
+    },
+
+    {
+      title: 'AI based invoice Analyzer ',
+      description: 'AI based invoice analyzer using Gemini API',
+      image: 'assets/images/portfolio.png',
+      tags: ['Flask','Gemini API', 'React','TypeScript'],
+      github: 'https://github.com/yonathan001/React-Portfolio',
       demo: '#',
     },
    

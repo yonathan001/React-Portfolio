@@ -119,7 +119,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-4">My Profile</h3>
                 <div className="space-y-4 text-textSecondary">
                  <p>
-  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with <strong>React.js / TypeScript</strong>, <strong>Python</strong>, <strong>Django</strong>, <strong>Flask</strong>, <strong>Laravel</strong>, <strong>SQL Databases</strong>, <strong>Tailwind CSS</strong> My expertise lies in web applications that are efficient and user-friendly.
+  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with <strong>React.js / TypeScript</strong>, <strong>Python</strong>, <strong>Django</strong>, <strong>Flask</strong>, <strong>Laravel</strong>, <strong>SQL Databases</strong> and <strong>Tailwind</strong>. My expertise lies in web applications that are efficient and user-friendly.
 </p>
 
                   <p>
