@@ -58,7 +58,14 @@ const Projects = () => {
       github: 'https://github.com/yonathan001/AI-Invoice-Analyzer',
       demo: '#',
     },
-   
+    {
+      title: 'AI Driven Micro Finance Solution ',
+      description: 'A secure, AI-Driven credit scoring evaluation model  that treat verified identity and behavioral data as a form of alternative collateral. ',
+      image: 'assets/images/mf.png',
+      tags: ['Python','Flask','Gemini API', 'React','TypeScript'],
+      github: 'https://github.com/mckienzie7/MicroFinance-Solution',
+      demo: 'https://addismicrofinance.tech/',
+    },
   ];
 
   return (
