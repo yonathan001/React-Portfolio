@@ -91,11 +91,11 @@ const Projects = () => {
                 className="bg-primary rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
               >
                 {/* Project Image */}
-                <div className="relative overflow-hidden group h-48">
+                <div className="relative overflow-hidden group aspect-video bg-gray-100 dark:bg-gray-800">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
