@@ -11,26 +11,29 @@ import {
   SiPostman,
   SiPython,
   SiReact,
-  SiTailwindcss
-} from 'react-icons/si';
+  SiTailwindcss,
+  SiTypescript,
+  SiFlask
+}  from 'react-icons/si';
 
 import { motion } from 'framer-motion';
 
 const About = () => {
   const skills = [
-    { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-400' },
     { name: 'React', icon: SiReact, color: 'text-blue-400' },
-    { name: 'Laravel', icon: SiLaravel, color: 'text-red-500' },
+    { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-400' },
+    { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
     { name: 'Python', icon: SiPython, color: 'text-blue-700' },
     { name: 'Django', icon: SiDjango, color: 'text-green-700' },
-    { name: 'PHP', icon: SiPhp, color: 'text-blue-400' },
+    { name: 'Flask', icon: SiFlask, color: 'text-blue-400' },   
+    { name: 'Laravel', icon: SiLaravel, color: 'text-red-500' },
     { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
     { name: 'MySQL', icon: SiMysql, color: 'text-blue-400' },
     { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400' },
     { name: 'Git', icon: SiGit, color: 'text-red-500' },
     { name: 'Postman', icon: SiPostman, color: 'text-orange-500' },
-    { name: 'MongoDB', icon: SiMongodb, color: 'text-green-400' },
     
+      
   ];
 
   const socialLinks = [
@@ -116,7 +119,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-4">My Profile</h3>
                 <div className="space-y-4 text-textSecondary">
                  <p>
-  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with <strong>React.js</strong>, <strong>Django (Python)</strong>, <strong>Laravel (PHP)</strong>, <strong>SQL</strong> and <strong>NoSQL databases</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap</strong>. My expertise lies in web applications that are efficient and user-friendly.
+  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with <strong>React.js / TypeScript</strong>, <strong>Python</strong>, <strong>Django</strong>, <strong>Flask</strong>, <strong>Laravel</strong>, <strong>SQL Databases</strong>, <strong>Tailwind CSS</strong> My expertise lies in web applications that are efficient and user-friendly.
 </p>
 
                   <p>
