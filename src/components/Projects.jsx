@@ -22,8 +22,8 @@ const Projects = () => {
       demo: '#',
     },
     {
-      title: 'Chapa Payment Gateway Integration in Laravel',
-      description: 'working on integrating the Chapa payment gateway API into my project with #Laravel framework. ',
+      title: 'Chapa Payment Gateway Integration',
+      description: 'Working on integrating the Chapa (Local Ethiopian Payment gateway) API into one existing project',
       image: '../assets/images/chapa.png',
       tags: ['Laravel', 'Tailwind', 'MySQL'],
       github: 'https://github.com/yonathan001/Chapa_Payment_Laravel',
@@ -53,9 +53,9 @@ const Projects = () => {
     {
       title: 'AI based invoice Analyzer ',
       description: 'AI based invoice analyzer using Gemini API',
-      image: 'assets/images/portfolio.png',
-      tags: ['Flask','Gemini API', 'React','TypeScript'],
-      github: 'https://github.com/yonathan001/React-Portfolio',
+      image: 'assets/images/invoice.png',
+      tags: ['Python','Flask','Gemini API', 'React','TypeScript'],
+      github: 'https://github.com/yonathan001/AI-Invoice-Analyzer',
       demo: '#',
     },
    
