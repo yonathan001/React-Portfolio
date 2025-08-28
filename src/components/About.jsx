@@ -1,19 +1,19 @@
 import { FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import {
-  SiDjango,
-  SiGit,
-  SiJavascript,
-  SiLaravel,
-  SiMongodb,
-  SiMysql,
-  SiPhp,
-  SiPostgresql,
-  SiPostman,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiFlask
+SiDjango,
+SiDocker,
+SiFlask,
+SiGit,
+SiJavascript,
+SiLaravel,
+SiMongodb,
+SiMysql,
+SiPostgresql,
+SiPostman,
+SiPython,
+SiReact,
+SiTailwindcss,
+SiTypescript
 }  from 'react-icons/si';
 
 import { motion } from 'framer-motion';
@@ -30,10 +30,12 @@ const About = () => {
     { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
     { name: 'MySQL', icon: SiMysql, color: 'text-blue-400' },
     { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400' },
+     { name: 'MongoDB', icon: SiMongodb, color: 'text-green-600' },
     { name: 'Git', icon: SiGit, color: 'text-red-500' },
     { name: 'Postman', icon: SiPostman, color: 'text-orange-500' },
-    
-      
+     { name: 'Docker', icon: SiDocker, color: 'text-blue-500' },
+   
+
   ];
 
   const socialLinks = [
@@ -69,14 +71,14 @@ const About = () => {
                   {/* Add your profile image here */}
                   <div className="w-full h-full flex items-center justify-center text-secondary">
                   <img
-  src="assets/images/me.png" // or use a URL
-  alt="Yonathan Wondosen"
+  src="assets/images/mee.png" // or use a URL
+  alt="YW"
   className="w-full h-full object-cover"
 />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-center mb-2">Yonathan Wondosen</h3>
-                <p className="text-textSecondary text-center mb-4">Senior Software Engineer</p>
+                <p className="text-textSecondary text-center mb-4">Senior  Software Engineer</p>
                 <div className="flex justify-center gap-4 mb-6">
                   {socialLinks.map((social, index) => (
                     <a
@@ -119,11 +121,22 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-4">My Profile</h3>
                 <div className="space-y-4 text-textSecondary">
                  <p>
-  Hello👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with <strong>React.js / TypeScript</strong>, <strong>Python</strong>, <strong>Django</strong>, <strong>Flask</strong>, <strong>Laravel</strong>, <strong>SQL Databases</strong> and <strong>Tailwind</strong>. My expertise lies in web applications that are efficient and user-friendly.
+Hello 👋! My name is Yonathan Wondosen. I'm a senior
+full-stack software developer based in Ethiopia. I work
+extensively with React.js / TypeScript, Python (Django,
+Flask), Laravel, Tailwind, SQL and NO-SQL Databases,
+building efficient, scalable, and user-friendly software
+solutions.
+In addition
 </p>
 
                   <p>
-                  I constantly update my skills and explore new technologies to stay ahead in the ever-evolving tech landscape. I have a strong passion for problem-solving and a deep dedication to my work. Building high-performance digital solutions that enhance user experience and drive efficiency is always a priority.
+                 In addition to full-stack development, I have hands-on
+experience with DevOps practices, including Docker
+containerization, deploying and managing applications
+on AWS EC2 and VPS environments, and implementing
+CI/CD pipelines using GitHub Actions to automate
+testing, building, and deployment processes.
                   </p>
                  
                 </div>

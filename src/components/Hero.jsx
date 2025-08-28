@@ -42,9 +42,8 @@ const Hero = () => {
                     Yonathan
                   </span>
                 </h1>
-                <p className="text-textSecondary text-lg md:text-xl max-w-xl leading-relaxed">
-                  I'm full-stack software developer with 4+ years of experiences.
-                </p>
+                
+                <p className="text-textSecondary text-lg mb-4">  I'm full-stack software developer with 4+ years of experiences.</p>
               </motion.div>
 
               <motion.div
@@ -73,7 +72,7 @@ const Hero = () => {
               >
                 <p className="text-textSecondary text-sm mb-4">Specialized </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  {['React','Laravel','Django','Tailwind'].map((tech, index) => (
+                  {['React','Django','Flask','Laravel'].map((tech, index) => (
                     <span
                       key={tech}
                       className="px-4 py-2 rounded-lg bg-primary-light text-textSecondary text-sm

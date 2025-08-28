@@ -37,11 +37,11 @@ const Experience = () => {
       location: 'Addis Ababa, Ethiopia',
       duration: 'Dec 2020 - Present',
       description: [
-        'Worked on various freelance projects, including E-commerce websites, Landing Pages, Electronic medical record (EMR) Systems and custom web applications.',
+        'Worked on various freelance projects, including RAG (Retrieval-Augmented-Generation) AI, Electronic medical record (EMR) Systems, and custom web applications.',
         
    
       ],
-      skills: ['React', 'Laravel','Python', 'Django', 'MYSQL', 'PHP', 'Javascript' , 'Tailwind', 'Git', 'PostgreSQL'],
+      skills: ['React','Python', 'Flask', 'Django', 'Laravel', 'SQL', 'NO-SQL', 'PHP', 'Javascript' , 'Tailwind', 'Git', 'GitHub', 'Docker', 'AWS'],
     },
     
   ];
