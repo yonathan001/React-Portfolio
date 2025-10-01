@@ -1,4 +1,4 @@
-import { FiDownload } from 'react-icons/fi';
+import { FiDownload, FiArrowRight, FiGithub, FiLinkedin, FiMail, FiChevronDown } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -12,94 +12,167 @@ const Hero = () => {
     document.body.removeChild(link);
   };
 
+  const socialLinks = [
+    { icon: FiGithub, href: 'https://github.com/YonathanWondosen', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/yonathan-wondosen-a025bb239/', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:yonathanwondosen@gmail.com', label: 'Email' }
+  ];
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-slate-900 text-white overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(100,255,218,0.1),transparent_50%)]"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      </div>
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-12 w-64 h-64 bg-secondary/10 rounded-full mix-blend-multiply filter blur-xl animate-blob" />
-        <div className="absolute top-1/3 -right-12 w-64 h-64 bg-secondary/20 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-1/2 w-64 h-64 bg-secondary/15 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000" />
+        <motion.div 
+          animate={{ 
+            x: [0, 100, 0],
+            y: [0, -100, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ 
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-1/4 -left-12 w-96 h-96 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-full filter blur-3xl" 
+        />
+        <motion.div 
+          animate={{ 
+            x: [0, -100, 0],
+            y: [0, 100, 0],
+            scale: [1, 0.8, 1]
+          }}
+          transition={{ 
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-1/3 -right-12 w-80 h-80 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full filter blur-3xl" 
+        />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <div className="space-y-8 text-center md:text-left md:grid md:grid-cols-2 md:items-center md:gap-12 md:space-y-0">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-center min-h-screen py-20">
             {/* Text Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 text-center max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="space-y-4"
+                transition={{ duration: 0.8 }}
+                className="space-y-6"
               >
-                <span className="inline-block text-secondary font-medium px-4 py-2 bg-secondary/10 rounded-full">
-                Software engineer.
-                </span>
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  Hey, I'm{' '}
-                  <span className="text-secondary">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 border border-cyan-400/30 rounded-full text-cyan-400 font-medium text-sm"
+                >
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  Available for new opportunities
+                </motion.div>
+
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+                  <span className="block text-white mb-2">Hey, I'm</span>
+                  <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Yonathan
                   </span>
                 </h1>
                 
-                <p className="text-textSecondary text-lg mb-4">  I'm full-stack software developer with 4+ years of experiences.</p>
+                <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+                  Senior Full-Stack Software Developer with 4+ years of experience crafting 
+                  <span className="text-cyan-400 font-semibold"> innovative digital solutions</span> that 
+                  make a real impact.
+                </p>
               </motion.div>
 
+              {/* Action Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex flex-wrap gap-4 justify-center md:justify-start"
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <button
+                <motion.button
                   onClick={handleDownloadCV}
-                  className="px-8 py-4 rounded-2xl bg-secondary text-primary font-semibold 
-                  hover:translate-y-[-4px] hover:shadow-lg hover:shadow-secondary/25
-                  transition-all duration-300 flex items-center gap-3 group"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-900 font-semibold rounded-2xl 
+                  hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-cyan-400/25"
                 >
                   <FiDownload className="w-5 h-5 group-hover:animate-bounce" />
                   Download Resume
-                </button>
+                </motion.button>
+
+                <motion.a
+                  href="#contact"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white font-semibold rounded-2xl 
+                  border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  Let's Talk
+                  <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </motion.a>
+              </motion.div>
+
+              {/* Social Links */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="flex gap-4 justify-center"
+              >
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="p-3 bg-slate-800/50 backdrop-blur-sm rounded-xl text-slate-300 hover:text-cyan-400 
+                    border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
+                    aria-label={social.label}
+                  >
+                    <social.icon size={20} />
+                  </motion.a>
+                ))}
               </motion.div>
 
               {/* Tech Stack */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="pt-8 border-t border-textSecondary/10"
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="pt-8 border-t border-slate-700/50"
               >
-                <p className="text-textSecondary text-sm mb-4">Specialized </p>
-                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  {['React','Django','Flask','Laravel'].map((tech, index) => (
-                    <span
+                <p className="text-slate-400 text-sm mb-4 text-center">Specialized in</p>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {['React', 'Python', 'Django', 'Flask', 'Laravel', 'TypeScript'].map((tech, index) => (
+                    <motion.span
                       key={tech}
-                      className="px-4 py-2 rounded-lg bg-primary-light text-textSecondary text-sm
-                      border border-textSecondary/10 hover:border-secondary/50 transition-colors duration-300"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
+                      className="px-4 py-2 bg-slate-800/30 backdrop-blur-sm text-slate-300 text-sm font-medium
+                      border border-slate-700/30 hover:border-cyan-400/50 hover:text-cyan-400 rounded-lg transition-all duration-300"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>
             </div>
 
-            {/* Decorative Image/Pattern */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="relative hidden md:block"
-            >
-              <div className="aspect-square rounded-full bg-gradient-to-br from-secondary/20 via-secondary/10 to-transparent
-                transform rotate-12 animate-pulse"
-              >
-                <div className="absolute inset-4 rounded-full bg-gradient-to-tl from-secondary/20 via-secondary/10 to-transparent
-                  transform -rotate-12"
-                />
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>
@@ -108,10 +181,18 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
+          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          <span className="text-sm font-medium">Scroll Down</span>
+          <FiChevronDown size={20} />
+        </motion.div>
       </motion.div>
     </section>
   );
