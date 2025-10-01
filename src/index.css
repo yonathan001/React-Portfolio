@@ -1,24 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    @apply bg-primary text-textPrimary font-inter;
-  }
+/* Custom component styles */
+.nav-link {
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@layer components {
-  .nav-link {
-    @apply cursor-pointer hover:text-secondary transition-all duration-300;
-  }
-  .btn {
-    @apply px-6 py-3 border border-secondary text-secondary rounded hover:bg-secondary/10 transition-all duration-300;
-  }
+.nav-link:hover {
+  color: #64ffda;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
   .section-title {
-    @apply text-2xl md:text-3xl font-bold mb-8;
+    font-size: 1.875rem;
   }
 }
 

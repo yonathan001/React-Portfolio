@@ -1,37 +1,106 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FiAward, FiExternalLink, FiCalendar, FiUser } from 'react-icons/fi';
 
 const Certifications = () => {
-  // You can add more certifications to this array
   const certifications = [
     {
       id: 1,
-      title: 'Django Web Framework',
-      issuer: 'Coursera ',
+      title: 'Python Django Web Framework',
+      issuer: 'META',
+      platform: 'Coursera',
       date: '2025',
-      description: 'Yonathan Wondosen has successfully completed Django Web Framework an online non-credit course authorized by Meta and offered through Coursera ',
+      category: 'Web Development',
+      level: 'Intermediate',
+      description: 'Comprehensive course covering Django web framework, REST APIs, and full-stack development with Python.',
       credentialUrl: 'https://coursera.org/verify/H6XGZWUQ1RIV',
-      tags: ['Django', 'Python', 'REST API']
+      tags: ['Django', 'Python', 'REST API', 'Web Development'],
+      logo: '🔷', // Meta logo placeholder
+      verified: true,
+      skills: ['Backend Development', 'API Design', 'Database Management']
+    },
+    {
+      id: 2,
+      title: 'Supervised Machine Learning: Regression and Classification',
+      issuer: 'Stanford University',
+      platform: 'Coursera',
+      date: '2025',
+      category: 'Machine Learning',
+      level: 'Advanced',
+      description: 'Advanced machine learning course covering regression, classification algorithms, and practical implementation.',
+      credentialUrl: 'https://coursera.org/verify/EC8Z2W1PYQ9X',
+      tags: ['Machine Learning', 'AI', 'Regression', 'Classification'],
+      logo: '🎓', // Stanford logo placeholder
+      verified: true,
+      skills: ['Data Science', 'Algorithm Design', 'Statistical Analysis']
+    },
+    {
+      id: 3,
+      title: 'RAG (Retrieval Augmented Generation)',
+      issuer: 'DeepLearning.AI',
+      platform: 'Coursera',
+      date: '2025',
+      category: 'Artificial Intelligence',
+      level: 'Advanced',
+      description: 'Cutting-edge course on Retrieval Augmented Generation, combining information retrieval with language generation.',
+      credentialUrl: 'https://coursera.org/verify/EC8Z2W1PYQ9X',
+      tags: ['AI', 'NLP', 'RAG', 'Deep Learning'],
+      logo: '🤖', // DeepLearning.AI logo placeholder
+      verified: true,
+      skills: ['Natural Language Processing', 'Information Retrieval', 'AI Architecture']
     }
-
-
-    
-    // Add more certifications as needed
   ];
 
+
+  const getLevelColor = (level) => {
+    switch (level) {
+      case 'Beginner': return 'bg-green-900/30 text-green-400 border-green-400/30';
+      case 'Intermediate': return 'bg-blue-900/30 text-blue-400 border-blue-400/30';
+      case 'Advanced': return 'bg-purple-900/30 text-purple-400 border-purple-400/30';
+      default: return 'bg-slate-700/30 text-slate-400 border-slate-400/30';
+    }
+  };
+
   return (
-    <section id="certifications" className="py-20 bg-tertiary/30">
-      <div className="container mx-auto px-4">
+    <section id="certifications" className="py-20 bg-slate-900 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(100,255,218,0.1),transparent_50%)]"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
-          <h2 className="section-title text-center mb-16">Certifications</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-3 mb-6"
+            >
+              <div className="p-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full">
+                <FiAward className="text-slate-900 text-2xl" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Professional Certifications
+              </h2>
+            </motion.div>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              Continuous learning and professional development through industry-recognized certifications
+            </p>
+          </div>
+
+
+          {/* Certifications Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert.id}
@@ -39,78 +108,91 @@ const Certifications = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-primary rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+                className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-slate-700/50 hover:border-cyan-400/50"
               >
-                <div className="p-6 flex-grow flex flex-col">
-                  <div className="flex items-center mb-4">
-                    <div className="p-2 rounded-full bg-secondary/10 mr-4">
-                      <svg 
-                        className="w-6 h-6 text-secondary" 
-                        fill="currentColor" 
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                          fillRule="evenodd" 
-                          d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                {/* Certificate Header */}
+                <div className="relative bg-gradient-to-r from-cyan-400 to-blue-400 p-6 text-slate-900">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-4xl">{cert.logo}</div>
+                      {cert.verified && (
+                        <div className="flex items-center gap-1 bg-slate-900/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                          <FiAward className="text-sm" />
+                          <span className="text-xs font-medium">Verified</span>
+                        </div>
+                      )}
                     </div>
-                    <h3 className="text-xl font-bold text-textPrimary">
+                    <h3 className="text-xl font-bold mb-2 line-clamp-2">
                       {cert.title}
                     </h3>
+                    <div className="flex items-center gap-2 text-slate-900/90">
+                      <FiUser className="text-sm" />
+                      <span className="text-sm">{cert.issuer}</span>
+                      <span className="text-slate-900/60">•</span>
+                      <span className="text-sm">{cert.platform}</span>
+                    </div>
                   </div>
-                  
-                  <p className="text-textSecondary text-sm mb-3">
-                    <span className="font-medium">Issued by:</span> {cert.issuer}
-                  </p>
-                  
-                  <p className="text-textSecondary text-sm mb-4">
-                    <span className="font-medium">Date:</span> {cert.date}
-                  </p>
-                  
-                  <p className="text-textSecondary text-sm mb-4 line-clamp-3">
+                </div>
+
+                {/* Certificate Body */}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 text-slate-400">
+                      <FiCalendar className="text-sm" />
+                      <span className="text-sm">{cert.date}</span>
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getLevelColor(cert.level)}`}>
+                      {cert.level}
+                    </span>
+                  </div>
+
+                  <p className="text-slate-300 text-sm mb-4 line-clamp-3">
                     {cert.description}
                   </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
+
+                  {/* Skills */}
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-slate-200 mb-2">Key Skills:</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {cert.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded-md"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {cert.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="text-secondary text-xs px-2 py-1 rounded-full border border-secondary/30 bg-secondary/5"
+                        className="text-xs px-3 py-1 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 text-cyan-400 rounded-full border border-cyan-400/30"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  
-                  <a 
-                    href={cert.credentialUrl} 
-                    target="_blank" 
+
+                  {/* View Credential Button */}
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center text-sm text-secondary hover:text-accent transition-colors"
+                    className="group/btn w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-900 px-6 py-3 rounded-xl font-medium hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 hover:shadow-lg"
                   >
-                    View Credential
-                    <svg 
-                      className="w-4 h-4 ml-1" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                      />
-                    </svg>
+                    <span>View Credential</span>
+                    <FiExternalLink className="text-sm group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </a>
                 </div>
               </motion.div>
             ))}
           </div>
+
         </motion.div>
       </div>
     </section>
