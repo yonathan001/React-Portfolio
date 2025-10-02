@@ -15,7 +15,8 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
-  SiSpringboot
+  SiNodedotjs,
+  SiGithubactions
 } from 'react-icons/si';
 
 import { motion } from 'framer-motion';
@@ -38,7 +39,7 @@ const About = () => {
         { name: 'Django', icon: SiDjango, color: 'text-green-400', level: 90 },
         { name: 'Flask', icon: SiFlask, color: 'text-blue-400', level: 85 },
         { name: 'Laravel', icon: SiLaravel, color: 'text-red-400', level: 80 },
-        { name: 'Spring Boot', icon: SiSpringboot, color: 'text-green-400', level: 75 }
+        { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-400', level: 85 }
       ]
     },
     {
@@ -55,6 +56,7 @@ const About = () => {
         { name: 'Docker', icon: SiDocker, color: 'text-blue-400', level: 80 },
         { name: 'AWS', icon: FiCloud, color: 'text-orange-400', level: 75 },
         { name: 'Git', icon: SiGit, color: 'text-red-400', level: 95 },
+        { name: 'GitHub Actions', icon: SiGithubactions, color: 'text-gray-400', level: 85 },
         { name: 'Postman', icon: SiPostman, color: 'text-orange-400', level: 90 }
       ]
     }
@@ -69,9 +71,7 @@ const About = () => {
 
   const stats = [
     { label: 'Years Experience', value: '4+', icon: '🚀' },
-    { label: 'Projects Completed', value: '15+', icon: '💼' },
-    { label: 'Technologies', value: '12+', icon: '⚡' },
-    { label: 'Happy Clients', value: '98%', icon: '😊' }
+    { label: 'Projects Completed', value: '15+', icon: '💼' }
   ];
 
   return (
@@ -106,9 +106,7 @@ const About = () => {
                 About Me
               </h2>
             </motion.div>
-            <p className="font-inter text-slate-300 text-lg max-w-2xl mx-auto font-normal">
-              Passionate full-stack developer crafting innovative solutions with modern technologies
-            </p>
+           
           </div>
 
           {/* Main Content */}
@@ -124,32 +122,19 @@ const About = () => {
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300">
                 {/* Profile Header */}
                 <div className="text-center mb-12">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 border border-cyan-400/30 rounded-full text-cyan-400 font-medium text-sm mb-6"
-                  >
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    Available for opportunities
-                  </motion.div>
+                 
                   
                   <h3 className="font-inter text-3xl md:text-4xl font-bold text-white mb-4">
                     <span className="text-white">I'm </span>
                     <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Yonathan Wondosen</span>
                   </h3>
-                  <p className="font-inter text-cyan-400 font-semibold text-xl mb-2">Senior Software Engineer</p>
-                  <p className="font-inter text-slate-400 font-normal">Full-Stack Developer & Tech Lead</p>
+                 
+                  <p className="font-inter text-slate-400 font-normal">Senior Software Engineer Full-Stack Developer & Tech Lead</p>
                 </div>
 
                 {/* Journey Content */}
                 <div className="space-y-8 text-slate-300 leading-relaxed">
-                  <p className="font-inter text-lg font-normal text-center max-w-4xl mx-auto">
-                    A passionate senior full-stack software developer based in Ethiopia with over 4 years of experience 
-                    crafting <span className="text-cyan-400 font-semibold">efficient, scalable, and user-friendly software solutions</span> 
-                    that make a real impact in the digital world.
-                  </p>
+                  
 
                   {/* Technical Expertise - Single Card */}
                   <div className="bg-slate-700/30 rounded-2xl p-8 border border-slate-600/30 mt-12">
@@ -159,14 +144,11 @@ const About = () => {
                     </div>
                     <div className="space-y-4">
                       <p className="font-inter font-normal">
-                        I work extensively with modern technologies including <span className="text-cyan-400 font-medium">React.js</span>, 
-                        <span className="text-cyan-400 font-medium"> TypeScript</span>, <span className="text-cyan-400 font-medium">Python</span> (Django, Flask), 
-                        <span className="text-cyan-400 font-medium"> Laravel</span>, and both SQL and NoSQL databases. My expertise spans 
-                        the entire development lifecycle, from concept to deployment.
-                      </p>
-                      <p className="font-inter font-normal">
-                        Beyond full-stack development, I have hands-on experience with <span className="text-cyan-400 font-medium">DevOps practices</span>, 
-                        including Docker containerization, AWS EC2 deployment, and CI/CD pipeline implementation using GitHub Actions.
+                      Hello 👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with React.js / TypeScript, Python (Django, Flask), Laravel, Tailwind, SQL and NO-SQL Databases, building efficient, scalable, and user-friendly software solutions.
+                      In addition to full-stack development,</p>
+
+                      <p>  I have hands-on experience with DevOps practices, including Docker
+                      containerization, deploying and managing applications on AWS EC2 and VPS environments, and implementing CI/CD pipelines using GitHub Actions to automate testing, building, and deployment processes.
                       </p>
                     </div>
                   </div>

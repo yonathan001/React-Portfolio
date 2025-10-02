@@ -1,4 +1,4 @@
-import { FiDownload, FiArrowRight, FiGithub, FiLinkedin, FiMail, FiChevronDown } from 'react-icons/fi';
+import { FiDownload, FiArrowRight, FiChevronDown } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -12,11 +12,7 @@ const Hero = () => {
     document.body.removeChild(link);
   };
 
-  const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/yonathan001', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/yonathan-wondosen-a025bb239/', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:yonathanwondosen@gmail.com', label: 'Email' }
-  ];
+  // Social links removed per request
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-slate-900 text-white overflow-hidden">
@@ -123,29 +119,7 @@ const Hero = () => {
                 </motion.a>
               </motion.div>
 
-              {/* Social Links */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex gap-4 justify-center"
-              >
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-3 bg-slate-800/50 backdrop-blur-sm rounded-xl text-slate-300 hover:text-cyan-400 
-                    border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
-                    aria-label={social.label}
-                  >
-                    <social.icon size={20} />
-                  </motion.a>
-                ))}
-              </motion.div>
+              {/* Social Links removed */}
 
               {/* Tech Stack */}
               <motion.div

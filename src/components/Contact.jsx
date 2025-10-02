@@ -1,4 +1,5 @@
 import { FiGithub, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FaTelegramPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -58,9 +59,14 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
                 >
-                  <FiMapPin className="text-cyan-400 text-2xl mb-4 mx-auto" />
-                  <h3 className="text-xl font-semibold mb-2">Location</h3>
-                  <p className="text-slate-300">Available for remote work worldwide</p>
+                  <FiPhone className="text-cyan-400 text-2xl mb-4 mx-auto" />
+                  <h3 className="text-xl font-semibold mb-2">Call Me</h3>
+                  <a 
+                    href="tel:+251914287268"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-300"
+                  >
+                    +251 914 287 268
+                  </a>
                 </motion.div>
               </div>
 
@@ -72,13 +78,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 className="flex justify-center gap-6 mb-12"
               >
-                <a
-                  href="mailto:yonathanwondosen@gmail.com"
-                  className="group bg-slate-800/50 backdrop-blur-sm p-4 rounded-full border border-slate-700/50 hover:border-cyan-400/50 hover:bg-cyan-400/10 transition-all duration-300"
-                  aria-label="Email"
-                >
-                  <FiMail className="text-slate-300 group-hover:text-cyan-400 transition-colors duration-300" size={24} />
-                </a>
+               
                 <a
                   href="https://github.com/yonathan001"
                   target="_blank"
@@ -105,6 +105,15 @@ const Contact = () => {
                   aria-label="Instagram"
                 >
                   <FiInstagram className="text-slate-300 group-hover:text-cyan-400 transition-colors duration-300" size={24} />
+                </a>
+                <a
+                  href="https://t.me/yo_na_th_an"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-slate-800/50 backdrop-blur-sm p-4 rounded-full border border-slate-700/50 hover:border-cyan-400/50 hover:bg-cyan-400/10 transition-all duration-300"
+                  aria-label="Telegram"
+                >
+                  <FaTelegramPlane className="text-slate-300 group-hover:text-cyan-400 transition-colors duration-300" size={24} />
                 </a>
               </motion.div>
             </motion.div>
