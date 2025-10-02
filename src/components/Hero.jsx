@@ -73,20 +73,20 @@ const Hero = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 border border-cyan-400/30 rounded-full text-cyan-400 font-medium text-sm"
+                  className="font-inter inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 border border-cyan-400/30 rounded-full text-cyan-400 font-medium text-sm"
                 >
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   Available for new opportunities
                 </motion.div>
 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-                  <span className="block text-white mb-2">Hey, I'm</span>
-                  <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h1 className="font-inter text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                  <span className="block text-white mb-2 font-medium">Hey, I'm</span>
+                  <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold">
                     Yonathan
                   </span>
                 </h1>
                 
-                <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+                <p className="font-inter text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal">
                   Senior Full-Stack Software Developer with 4+ years of experience crafting 
                   <span className="text-cyan-400 font-semibold"> innovative digital solutions</span> that 
                   make a real impact.
@@ -104,7 +104,7 @@ const Hero = () => {
                   onClick={handleDownloadCV}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-900 font-semibold rounded-2xl 
+                  className="font-inter group px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-900 font-semibold rounded-2xl 
                   hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-cyan-400/25"
                 >
                   <FiDownload className="w-5 h-5 group-hover:animate-bounce" />
@@ -115,7 +115,7 @@ const Hero = () => {
                   href="#contact"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white font-semibold rounded-2xl 
+                  className="font-inter group px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white font-semibold rounded-2xl 
                   border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 flex items-center justify-center gap-3"
                 >
                   Let's Talk
@@ -154,7 +154,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="pt-8 border-t border-slate-700/50"
               >
-                <p className="text-slate-400 text-sm mb-4 text-center">Specialized in</p>
+                <p className="font-inter text-slate-400 text-sm mb-4 text-center font-normal">Specialized in</p>
                 <div className="flex flex-wrap gap-3 justify-center">
                   {['React', 'Python', 'Django', 'Flask', 'Laravel', 'TypeScript'].map((tech, index) => (
                     <motion.span
@@ -163,7 +163,7 @@ const Hero = () => {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: 0.9 + index * 0.1 }}
                       whileHover={{ scale: 1.05 }}
-                      className="px-4 py-2 bg-slate-800/30 backdrop-blur-sm text-slate-300 text-sm font-medium
+                      className="font-inter px-4 py-2 bg-slate-800/30 backdrop-blur-sm text-slate-300 text-sm font-medium
                       border border-slate-700/30 hover:border-cyan-400/50 hover:text-cyan-400 rounded-lg transition-all duration-300"
                     >
                       {tech}
@@ -187,7 +187,7 @@ const Hero = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
+          className="font-inter flex flex-col items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors duration-300 cursor-pointer"
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <span className="text-sm font-medium">Scroll Down</span>
