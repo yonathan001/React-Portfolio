@@ -255,27 +255,7 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Summary Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-lg border border-slate-700/50">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">4+</div>
-              <div className="text-slate-300 font-medium">Years Experience</div>
-            </div>
-            <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-lg border border-slate-700/50">
-              <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
-              <div className="text-slate-300 font-medium">Projects Delivered</div>
-            </div>
-            <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-lg border border-slate-700/50">
-              <div className="text-4xl font-bold text-purple-400 mb-2">3</div>
-              <div className="text-slate-300 font-medium">Current Roles</div>
-            </div>
-          </motion.div>
+          {/* Summary Stats Removed */}
         </motion.div>
       </div>
     </section>

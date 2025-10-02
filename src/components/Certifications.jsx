@@ -11,11 +11,12 @@ const Certifications = () => {
       platform: 'Coursera',
       date: '2025',
       category: 'Web Development',
-      level: 'Intermediate',
+      level: 'Advanced',
       description: 'Comprehensive course covering Django web framework, REST APIs, and full-stack development with Python.',
       credentialUrl: 'https://coursera.org/verify/H6XGZWUQ1RIV',
       tags: ['Django', 'Python', 'REST API', 'Web Development'],
-      logo: '🔷', // Meta logo placeholder
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/1200px-Meta_Platforms_Inc._logo.svg.png',
+      logoClass: 'h-10 w-10 object-contain',
       verified: true,
       skills: ['Backend Development', 'API Design', 'Database Management']
     },
@@ -30,7 +31,8 @@ const Certifications = () => {
       description: 'Advanced machine learning course covering regression, classification algorithms, and practical implementation.',
       credentialUrl: 'https://coursera.org/verify/EC8Z2W1PYQ9X',
       tags: ['Machine Learning', 'AI', 'Regression', 'Classification'],
-      logo: '🎓', // Stanford logo placeholder
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Stanford_University_seal_2003.svg/1024px-Stanford_University_seal_2003.svg.png',
+      logoClass: 'h-10 w-10 object-contain bg-white p-1 rounded-full',
       verified: true,
       skills: ['Data Science', 'Algorithm Design', 'Statistical Analysis']
     },
@@ -45,7 +47,8 @@ const Certifications = () => {
       description: 'Cutting-edge course on Retrieval Augmented Generation, combining information retrieval with language generation.',
       credentialUrl: 'https://coursera.org/verify/EC8Z2W1PYQ9X',
       tags: ['AI', 'NLP', 'RAG', 'Deep Learning'],
-      logo: '🤖', // DeepLearning.AI logo placeholder
+      logo: 'https://www.deeplearning.ai/wp-content/uploads/2023/01/cropped-dlai-logo-color-1-32x32.png',
+      logoClass: 'h-10 w-10 object-contain bg-white p-1 rounded',
       verified: true,
       skills: ['Natural Language Processing', 'Information Retrieval', 'AI Architecture']
     }
@@ -86,11 +89,12 @@ const Certifications = () => {
               viewport={{ once: true }}
               className="inline-flex items-center gap-3 mb-6"
             >
-              <div className="p-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full">
-                <FiAward className="text-slate-900 text-2xl" />
+              <div className="p-3 bg-slate-700 rounded-full">
+                <FiAward className="text-cyan-400 text-2xl" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Professional Certifications
+              
+              <h2 className="font-inter text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Professional Certifications
               </h2>
             </motion.div>
             <p className="text-slate-300 text-lg max-w-2xl mx-auto">
@@ -111,11 +115,20 @@ const Certifications = () => {
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-slate-700/50 hover:border-cyan-400/50"
               >
                 {/* Certificate Header */}
-                <div className="relative bg-gradient-to-r from-cyan-400 to-blue-400 p-6 text-slate-900">
+                <div className="relative bg-slate-700 p-6 text-white">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="text-4xl">{cert.logo}</div>
+                      <img 
+                        src={cert.logo} 
+                        alt={`${cert.issuer} logo`} 
+                        className={cert.logoClass || 'h-10 w-10 object-contain'}
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjwvc3ZnPg=='; // Fallback to a circle
+                          e.target.className = 'h-10 w-10 bg-slate-600 rounded-full p-1';
+                        }}
+                      />
                       {cert.verified && (
                         <div className="flex items-center gap-1 bg-slate-900/20 backdrop-blur-sm px-3 py-1 rounded-full">
                           <FiAward className="text-sm" />
@@ -126,11 +139,11 @@ const Certifications = () => {
                     <h3 className="text-xl font-bold mb-2 line-clamp-2">
                       {cert.title}
                     </h3>
-                    <div className="flex items-center gap-2 text-slate-900/90">
+                    <div className="flex items-center gap-2 text-white/90">
                       <FiUser className="text-sm" />
                       <span className="text-sm">{cert.issuer}</span>
-                      <span className="text-slate-900/60">•</span>
-                      <span className="text-sm">{cert.platform}</span>
+                      <span className="text-white/60">•</span>
+                      <span className="text-sm text-white/90">{cert.platform}</span>
                     </div>
                   </div>
                 </div>
@@ -183,7 +196,7 @@ const Certifications = () => {
                     href={cert.credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-900 px-6 py-3 rounded-xl font-medium hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 hover:shadow-lg"
+                    className="group/btn w-full inline-flex items-center justify-center gap-2 bg-slate-700 text-cyan-400 px-6 py-3 rounded-xl font-medium hover:bg-slate-600 transition-all duration-300 border border-slate-600 hover:border-cyan-400/50"
                   >
                     <span>View Credential</span>
                     <FiExternalLink className="text-sm group-hover/btn:translate-x-1 transition-transform duration-300" />

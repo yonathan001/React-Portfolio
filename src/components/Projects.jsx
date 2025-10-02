@@ -1,10 +1,9 @@
-import { FiExternalLink, FiGithub, FiCode, FiFilter, FiEye, FiStar, FiCalendar } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiCode, FiEye, FiStar, FiCalendar } from 'react-icons/fi';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [hoveredProject, setHoveredProject] = useState(null);
+    const [hoveredProject, setHoveredProject] = useState(null);
 
   const projects = [
     {
@@ -89,11 +88,7 @@ const Projects = () => {
     },
   ];
 
-  const categories = ['All', ...new Set(projects.map(project => project.category))];
-  
-  const filteredProjects = projects.filter(project => 
-    selectedCategory === 'All' || project.category === selectedCategory
-  );
+  const filteredProjects = projects;
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -150,33 +145,7 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Category Filter */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="flex justify-center mb-12"
-          >
-            <div className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm rounded-full p-2 shadow-lg border border-slate-700/50">
-              <FiFilter className="text-slate-400 ml-2" />
-              {categories.map(category => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-900 shadow-lg'
-                      : 'text-slate-300 hover:bg-slate-700/50'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Projects Grid */}
+{/* Projects Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -214,7 +183,7 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   {/* Hover Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-blue-600/90 to-purple-600/90 flex items-center justify-center transition-all duration-300 ${
+                  <div className={`absolute inset-0 bg-gray-900/30 flex items-center justify-center transition-all duration-300 ${
                     hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
                   }`}>
                     <div className="flex gap-4">
