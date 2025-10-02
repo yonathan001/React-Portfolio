@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/YonathanWondosen', label: 'GitHub' },
+    { icon: FiGithub, href: 'https://github.com/yonathan001', label: 'GitHub' },
     { icon: FiLinkedin, href: 'https://www.linkedin.com/in/yonathan-wondosen-a025bb239/', label: 'LinkedIn' },
     { icon: FiMail, href: 'mailto:yonathanwondosen@gmail.com', label: 'Email' }
   ];
@@ -87,10 +87,10 @@ const Hero = () => {
                 </h1>
                 
                 <p className="font-inter text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal">
-                  Senior Full-Stack Software Developer with 4+ years of experience crafting 
-                  <span className="text-cyan-400 font-semibold"> innovative digital solutions</span> that 
-                  make a real impact.
-                </p>
+  🚀 Senior 
+  <span className="text-cyan-400 font-semibold tracking-wide"> Software Engineer   </span> |
+  4+ Years in Full-Stack Dev | Building scalable apps and intelligent solutions
+</p>
               </motion.div>
 
               {/* Action Buttons */}
@@ -156,7 +156,7 @@ const Hero = () => {
               >
                 <p className="font-inter text-slate-400 text-sm mb-4 text-center font-normal">Specialized in</p>
                 <div className="flex flex-wrap gap-3 justify-center">
-                  {['React', 'Python', 'Django', 'Flask', 'Laravel', 'TypeScript'].map((tech, index) => (
+                  {['React', 'Flask', 'Django', 'Node.js', 'Laravel'].map((tech, index) => (
                     <motion.span
                       key={tech}
                       initial={{ opacity: 0, scale: 0.8 }}
