@@ -16,9 +16,7 @@ const Projects = () => {
       category: 'AI/ML',
       github: '#',
       demo: '#',
-      status: 'Completed',
       year: '2024',
-      featured: true,
       complexity: 'Advanced',
       features: ['Vector Search', 'LLM Integration', 'Context Retrieval', 'Real-time Chat']
     },
@@ -32,9 +30,7 @@ const Projects = () => {
       category: 'Web Development',
       github: '#',
       demo: '#',
-      status: 'Completed',
       year: '2024',
-      featured: true,
       complexity: 'Intermediate',
       features: ['Patient Management', 'Appointment System', 'Medical Records', 'Reporting']
     },
@@ -48,9 +44,7 @@ const Projects = () => {
       category: 'Web Development',
       github: '#',
       demo: '#',
-      status: 'Completed',
       year: '2024',
-      featured: true,
       complexity: 'Advanced',
       features: ['Rent Collection', 'Maintenance Tracking', 'Analytics', 'Multi-tenant']
     },
@@ -64,9 +58,7 @@ const Projects = () => {
       category: 'Integration',
       github: 'https://github.com/yonathan001/Chapa_Payment_Laravel',
       demo: '#',
-      status: 'Completed',
       year: '2024',
-      featured: false,
       complexity: 'Intermediate',
       features: ['Payment Processing', 'Transaction History', 'Webhook Handling', 'Security']
     },
@@ -80,9 +72,7 @@ const Projects = () => {
       category: 'AI/ML',
       github: 'https://github.com/mckienzie7/MicroFinance-Solution',
       demo: 'https://addismicrofinance.tech/',
-      status: 'Live',
       year: '2024',
-      featured: true,
       complexity: 'Advanced',
       features: ['AI Credit Scoring', 'Identity Verification', 'Risk Assessment', 'Dashboard']
     },
@@ -158,20 +148,7 @@ const Projects = () => {
                 onMouseLeave={() => setHoveredProject(null)}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden border border-slate-700/50 hover:border-cyan-400/50 relative"
               >
-                {/* Featured Badge */}
-                {project.featured && (
-                  <div className="absolute top-4 left-4 z-20 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                    <FiStar className="text-xs" />
-                    Featured
-                  </div>
-                )}
-
-                {/* Status Badge */}
-                <div className="absolute top-4 right-4 z-20">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(project.status)}`}>
-                    {project.status}
-                  </span>
-                </div>
+                
 
                 {/* Project Image */}
                 <div className="relative overflow-hidden h-48 bg-gradient-to-br from-slate-100 to-slate-200">
