@@ -119,7 +119,7 @@ const Hero = () => {
                 </motion.a>
               </motion.div>
 
-              {/* Social Links removed */}
+             
 
               {/* Tech Stack */}
               <motion.div

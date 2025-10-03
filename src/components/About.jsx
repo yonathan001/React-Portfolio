@@ -145,9 +145,9 @@ const About = () => {
                     <div className="space-y-4">
                       <p className="font-inter font-normal">
                       Hello 👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with React.js / TypeScript, Python (Django, Flask), Laravel, Tailwind, SQL and NO-SQL Databases, building efficient, scalable, and user-friendly software solutions.
-                      In addition to full-stack development,</p>
+                      </p>
 
-                      <p>  I have hands-on experience with DevOps practices, including Docker
+                      <p>  In addition to full-stack development, I have hands-on experience with DevOps practices, including Docker
                       containerization, deploying and managing applications on AWS EC2 and VPS environments, and implementing CI/CD pipelines using GitHub Actions to automate testing, building, and deployment processes.
                       </p>
                     </div>

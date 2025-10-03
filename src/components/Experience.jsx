@@ -19,9 +19,9 @@ const Experience = () => {
         'Managed cross-functional teams and established development best practices'
       ],
       achievements: [
-        'Reduced system downtime by 60%',
-        'Led team of 5 developers',
-        'Implemented CI/CD pipeline'
+        'Implimented new system solutions',
+        'Led team of IT',
+        
       ],
       skills: ['Leadership', 'Healthcare Tech', 'Team Management', 'System Architecture', 'Web Applications'],
       icon: '🏥'
@@ -30,7 +30,7 @@ const Experience = () => {
       id: 2,
       title: 'Full Stack Software Developer',
       company: 'EtPayRent',
-      companyType: 'PropTech Startup',
+      companyType: 'PropTech',
       location: 'Addis Ababa, Ethiopia',
       duration: 'March 2024 - Present',
       type: 'Full-time',
@@ -38,13 +38,12 @@ const Experience = () => {
       description: [
         'Developing and maintaining comprehensive property management platform',
         'Integrated Telebirr and multiple payment gateways for seamless transactions',
-        'Conducting market research and data analysis for feature development',
-        'Optimized application performance resulting in 50% faster load times'
+        'Conducting market research and data analysis for feature development'
+       
       ],
       achievements: [
-        'Integrated 3+ payment gateways',
-        'Improved performance by 50%',
-        'Built responsive UI components'
+        'Integrated 1+ payment gateways',
+        'Architected and Developed Complex Backend system'
       ],
       skills: ['React', 'Spring Boot', 'Java', 'Payment APIs', 'Tailwind CSS', 'PostgreSQL'],
       icon: '🏠'
@@ -66,10 +65,10 @@ const Experience = () => {
       ],
       achievements: [
         '15+ successful projects',
-        '98% client satisfaction',
-        'AI/ML specialization'
+        'LLM / AI integration',
+        'Built custom web applications for diverse industries including healthcare and fintech'
       ],
-      skills: ['React', 'Python', 'Flask', 'Django', 'Laravel', 'AI/ML', 'Docker', 'AWS', 'Git'],
+      skills: ['React', 'Python', 'Flask', 'Django', 'Node.js' ,'Laravel', 'AI/ML', 'Docker', 'AWS', 'Git'],
       icon: '💼'
     }
   ];
@@ -131,8 +130,8 @@ const Experience = () => {
 
           {/* Timeline */}
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-[3px] bg-slate-600 rounded-full" />
+            {/* Timeline line - hidden on mobile, visible on md and up */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[3px] bg-slate-600 rounded-full" />
             
             {/* Experience items */}
             <div className="space-y-16">
@@ -147,13 +146,8 @@ const Experience = () => {
                     index % 2 === 0 ? 'lg:flex-row-reverse' : ''
                   }`}
                 >
-                  {/* Timeline dot */}
-                  <div className="absolute left-8 lg:left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full border-4 border-slate-900 shadow-lg z-10">
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-pulse opacity-75"></div>
-                  </div>
-                  
                   {/* Content */}
-                  <div className="lg:w-1/2 ml-20 lg:ml-0 lg:px-8">
+                  <div className="lg:w-1/2 ml-0 lg:ml-0 lg:px-8 w-full">
                     <motion.div
                       whileHover={{ y: -5 }}
                       transition={{ duration: 0.3 }}
