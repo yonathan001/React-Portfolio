@@ -1,6 +1,5 @@
 import { FiExternalLink, FiGithub, FiCode, FiEye, FiStar, FiCalendar } from 'react-icons/fi';
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const Projects = () => {
     const [hoveredProject, setHoveredProject] = useState(null);
@@ -107,29 +106,17 @@ const Projects = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto"
-        >
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-3 mb-6"
-            >
+            <div className="inline-flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full">
                 <FiCode className="text-slate-900 text-2xl" />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Featured Projects
               </h2>
-            </motion.div>
+            </div>
             <p className="text-slate-300 text-lg max-w-2xl mx-auto">
               A showcase of my latest work, featuring innovative solutions and cutting-edge technologies
             </p>
@@ -137,16 +124,12 @@ const Projects = () => {
 
 {/* Projects Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
-              <motion.div
+            {filteredProjects.map((project) => (
+              <div
                 key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
-                className="group bg-slate-800/50 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden border border-slate-700/50 hover:border-cyan-400/50 relative"
+                className="group bg-slate-800/50 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-slate-700/50 hover:border-cyan-400/50 relative"
               >
                 
 
@@ -273,10 +256,10 @@ const Projects = () => {
 
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
