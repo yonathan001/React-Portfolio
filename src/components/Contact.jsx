@@ -1,6 +1,5 @@
 import { FiGithub, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 
 const Contact = () => {
   const currentYear = new Date().getFullYear();
@@ -17,13 +16,7 @@ const Contact = () => {
         {/* Main Footer Content */}
         <section id="contact" className="py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center max-w-4xl mx-auto"
-            >
+            <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Let's Work Together
               </h2>
@@ -35,13 +28,7 @@ const Contact = () => {
 
               {/* Contact Methods */}
               <div className="grid md:grid-cols-2 gap-8 mb-16">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
-                >
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <FiMail className="text-cyan-400 text-2xl mb-4 mx-auto" />
                   <h3 className="text-xl font-semibold mb-2">Email Me</h3>
                   <a 
@@ -50,15 +37,9 @@ const Contact = () => {
                   >
                     yonathanwondosen@gmail.com
                   </a>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
-                >
+                <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <FiPhone className="text-cyan-400 text-2xl mb-4 mx-auto" />
                   <h3 className="text-xl font-semibold mb-2">Call Me</h3>
                   <a 
@@ -67,17 +48,11 @@ const Contact = () => {
                   >
                     +251 914 287 268
                   </a>
-                </motion.div>
+                </div>
               </div>
 
               {/* Social Links */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="flex justify-center gap-6 mb-12"
-              >
+              <div className="flex justify-center gap-6 mb-12">
                
                 <a
                   href="https://github.com/yonathan001"
@@ -115,8 +90,8 @@ const Contact = () => {
                 >
                   <FaTelegramPlane className="text-slate-300 group-hover:text-cyan-400 transition-colors duration-300" size={24} />
                 </a>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -124,23 +99,11 @@ const Contact = () => {
         <div className="border-t border-slate-700/50">
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-slate-400 text-sm"
-              >
+              <div className="text-slate-400 text-sm">
                 © {currentYear} Yonathan Wondosen. All rights reserved.
-              </motion.div>
+              </div>
               
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="flex gap-6 text-sm"
-              >
+              <div className="flex gap-6 text-sm">
                 <a href="#hero" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
                   Home
                 </a>
@@ -156,7 +119,7 @@ const Contact = () => {
                 <a href="#contact" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
                   Contact
                 </a>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
