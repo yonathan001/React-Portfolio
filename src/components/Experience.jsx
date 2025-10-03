@@ -1,5 +1,4 @@
-import { FiBriefcase, FiCalendar, FiMapPin, FiTrendingUp, FiUsers, FiCode, FiAward } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { FiBriefcase, FiCalendar, FiMapPin, FiCode, FiAward } from 'react-icons/fi';
 
 const Experience = () => {
   const experiences = [
@@ -100,29 +99,17 @@ const Experience = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto"
-        >
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-3 mb-6"
-            >
+            <div className="inline-flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full">
                 <FiBriefcase className="text-slate-900 text-2xl" />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Work Experience
               </h2>
-            </motion.div>
+            </div>
             <p className="text-slate-300 text-lg max-w-2xl mx-auto">
               My professional journey and key contributions in technology and software development
             </p>
@@ -136,23 +123,15 @@ const Experience = () => {
             {/* Experience items */}
             <div className="space-y-16">
               {experiences.map((exp, index) => (
-                <motion.div
+                <div 
                   key={exp.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
                   className={`relative flex flex-col lg:flex-row gap-8 ${
                     index % 2 === 0 ? 'lg:flex-row-reverse' : ''
                   }`}
                 >
                   {/* Content */}
                   <div className="lg:w-1/2 ml-0 lg:ml-0 lg:px-8 w-full">
-                    <motion.div
-                      whileHover={{ y: -5 }}
-                      transition={{ duration: 0.3 }}
-                      className="group bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-700/50 hover:border-cyan-400/50 relative overflow-hidden"
-                    >
+                    <div className="group bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-700/50 hover:border-cyan-400/50 relative overflow-hidden">
                       {/* Company Icon */}
                       <div className="absolute top-6 right-6 text-4xl opacity-20 group-hover:opacity-30 transition-opacity duration-300">
                         {exp.icon}
@@ -212,7 +191,7 @@ const Experience = () => {
                       {/* Achievements */}
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-slate-200 mb-3 flex items-center gap-2">
-                          <FiTrendingUp className="text-green-400" />
+                          <FiAward className="text-yellow-400" />
                           Key Achievements:
                         </h4>
                         <div className="grid grid-cols-1 gap-2">
@@ -242,15 +221,22 @@ const Experience = () => {
 
                       {/* Gradient Border Effect */}
                       <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                    </motion.div>
+                    </div>
                   </div>
-                </motion.div>
+
+                  {/* Timeline dot and line - hidden on mobile, visible on md and up */}
+                  <div className="hidden md:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 h-full w-12">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 flex items-center justify-center z-10 border-4 border-slate-800">
+                      <div className="w-1.5 h-1.5 rounded-full bg-slate-900"></div>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
 
           {/* Summary Stats Removed */}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
