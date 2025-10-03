@@ -31,8 +31,8 @@ const Projects = () => {
       github: '#',
       demo: '#',
       year: '2024',
-      complexity: 'Intermediate',
-      features: ['Patient Management', 'Appointment System', 'Medical Records', 'Reporting']
+      complexity: 'Advanced',
+      features: ['Patient Management', 'Appointment System', 'Medical Records', 'Reporting','SMS Notifications','Chat '] 
     },
     {
       id: 3,
@@ -60,7 +60,7 @@ const Projects = () => {
       demo: '#',
       year: '2024',
       complexity: 'Intermediate',
-      features: ['Payment Processing', 'Transaction History', 'Webhook Handling', 'Security']
+      features: ['Payment Processing', 'Transaction History', 'API Handling', 'Security']
     },
     {
       id: 5,
@@ -74,7 +74,7 @@ const Projects = () => {
       demo: 'https://addismicrofinance.tech/',
       year: '2024',
       complexity: 'Advanced',
-      features: ['AI Credit Scoring', 'Identity Verification', 'Risk Assessment', 'Dashboard']
+      features: ['AI Credit Scoring', 'Dashboard Overview' , 'Loan Management','Stripe Payment Processing']
     },
   ];
 

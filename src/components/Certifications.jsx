@@ -10,7 +10,7 @@ const Certifications = () => {
       issuer: 'META',
       platform: 'Coursera',
       date: '2025',
-      category: 'Web Development',
+      category: 'Framework',
       level: 'Advanced',
       description: 'Comprehensive course covering Django web framework, REST APIs, and full-stack development with Python.',
       credentialUrl: 'https://coursera.org/verify/H6XGZWUQ1RIV',
@@ -34,7 +34,7 @@ const Certifications = () => {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Stanford_University_seal_2003.svg/1024px-Stanford_University_seal_2003.svg.png',
       logoClass: 'h-10 w-10 object-contain bg-white p-1 rounded-full',
       verified: true,
-      skills: ['Data Science', 'Algorithm Design', 'Statistical Analysis']
+      skills: ['AI', 'ML', 'Regression', 'Classification']
     },
     {
       id: 3,
@@ -50,7 +50,7 @@ const Certifications = () => {
       logo: 'https://www.deeplearning.ai/wp-content/uploads/2023/01/cropped-dlai-logo-color-1-32x32.png',
       logoClass: 'h-10 w-10 object-contain bg-white p-1 rounded',
       verified: true,
-      skills: ['Natural Language Processing', 'Information Retrieval', 'AI Architecture']
+      skills: ['RAG', 'Vector Search', 'LLM Integration', 'Context Retrieval']
     }
   ];
 
