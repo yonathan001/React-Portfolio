@@ -1,205 +1,151 @@
-import { FiGithub, FiInstagram, FiLinkedin, FiPhone, FiMail, FiUser, FiCode, FiCloud } from 'react-icons/fi';
-import { FaTelegramPlane } from 'react-icons/fa';
-import {
-  SiDjango,
-  SiDocker,
-  SiFlask,
-  SiGit,
-  SiJavascript,
-  SiLaravel,
-  SiMongodb,
-  SiMysql,
-  SiPostgresql,
-  SiPostman,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiNodedotjs,
-  SiGithubactions
+import { FiUser, FiPhone, FiMail, FiGithub, FiLinkedin, FiMapPin } from 'react-icons/fi';
+import { 
+  SiReact, SiJavascript, SiTypescript, SiTailwindcss,
+  SiPython, SiDjango, SiFlask, SiLaravel, SiNodedotjs,
+  SiMysql, SiPostgresql, SiMongodb, SiDocker, SiGit
 } from 'react-icons/si';
 
 const About = () => {
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: [
-        { name: 'React', icon: SiReact, color: 'text-cyan-400', level: 90 },
-        { name: 'JavaScript', icon: SiJavascript, color: 'text-yellow-400', level: 95 },
-        { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-400', level: 85 },
-        { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400', level: 90 }
-      ]
-    },
-    {
-      title: 'Backend',
-      skills: [
-        { name: 'Python', icon: SiPython, color: 'text-blue-400', level: 95 },
-        { name: 'Django', icon: SiDjango, color: 'text-green-400', level: 90 },
-        { name: 'Flask', icon: SiFlask, color: 'text-blue-400', level: 85 },
-        { name: 'Laravel', icon: SiLaravel, color: 'text-red-400', level: 80 },
-        { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-400', level: 85 }
-      ]
-    },
-    {
-      title: 'Database',
-      skills: [
-        { name: 'MySQL', icon: SiMysql, color: 'text-blue-400', level: 90 },
-        { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400', level: 85 },
-        { name: 'MongoDB', icon: SiMongodb, color: 'text-green-400', level: 80 }
-      ]
-    },
-    {
-      title: 'DevOps & Tools',
-      skills: [
-        { name: 'Docker', icon: SiDocker, color: 'text-blue-400', level: 80 },
-        { name: 'AWS', icon: FiCloud, color: 'text-orange-400', level: 75 },
-        { name: 'Git', icon: SiGit, color: 'text-red-400', level: 95 },
-        { name: 'GitHub Actions', icon: SiGithubactions, color: 'text-gray-400', level: 85 },
-        { name: 'Postman', icon: SiPostman, color: 'text-orange-400', level: 90 }
-      ]
-    }
-  ];
-
-  const socialLinks = [
-    { name: 'LinkedIn', icon: FiLinkedin, link: 'https://www.linkedin.com/in/yonathan-wondosen-a025bb239/', color: 'hover:text-blue-400' },
-    { name: 'GitHub', icon: FiGithub, link: 'https://github.com/YonathanWondosen', color: 'hover:text-slate-300' },
-    { name: 'Instagram', icon: FiInstagram, link: 'https://www.instagram.com/yo_na_th_an/', color: 'hover:text-pink-400' },
-    { name: 'Telegram', icon: FaTelegramPlane, link: 'https://t.me/yo_na_th_an', color: 'hover:text-blue-400' }
+  const skills = [
+    { name: 'React', icon: SiReact },
+    { name: 'JavaScript', icon: SiJavascript },
+    { name: 'TypeScript', icon: SiTypescript },
+    { name: 'Tailwind', icon: SiTailwindcss },
+    { name: 'Python', icon: SiPython },
+    { name: 'Django', icon: SiDjango },
+    { name: 'Flask', icon: SiFlask },
+    { name: 'Laravel', icon: SiLaravel },
+    { name: 'Node.js', icon: SiNodedotjs },
+    { name: 'MySQL', icon: SiMysql },
+    { name: 'PostgreSQL', icon: SiPostgresql },
+    { name: 'MongoDB', icon: SiMongodb },
+    { name: 'Docker', icon: SiDocker },
+    { name: 'Git', icon: SiGit }
   ];
 
   const stats = [
-    { label: 'Years Experience', value: '4+', icon: '🚀' },
-    { label: 'Projects Completed', value: '15+', icon: '💼' }
+    { label: 'Years Experience', value: '4+' },
+    { label: 'Projects', value: '15+' },
+    { label: 'Clients', value: '20+' },
+    { label: 'Technologies', value: '15+' }
   ];
 
   return (
-    <section id="about" className="py-20 bg-slate-900 text-white relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(100,255,218,0.1),transparent_50%)]"></div>
-      </div>
+    <section id="about" className="py-16 bg-black text-white relative overflow-hidden">
+      {/* Subtle background accent */}
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center gap-3 mb-6">
-              <div className="p-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full">
-                <FiUser className="text-slate-900 text-2xl" />
+            <div className="inline-flex items-center gap-3 mb-4">
+              <div className="p-3 bg-white rounded-lg">
+                <FiUser className="text-black text-xl" />
               </div>
-              <h2 className="font-inter text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
                 About Me
               </h2>
             </div>
+            <p className="text-white/60 text-base max-w-2xl mx-auto">
+              Get to know more about my background and skills
+            </p>
           </div>
 
           {/* Main Content */}
-          <div className="mb-16">
-            {/* About Content */}
-            <div className="max-w-5xl mx-auto">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                {/* Profile Header */}
-                <div className="text-center mb-12">
-                  <h3 className="font-inter text-3xl md:text-4xl font-bold text-white mb-4">
-                    <span className="text-white">I'm </span>
-                    <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Yonathan Wondosen</span>
-                  </h3>
-                  <p className="font-inter text-slate-400 font-normal">Senior Software Engineer Full-Stack Developer & Tech Lead</p>
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {/* Left - Info */}
+            <div className="lg:col-span-2 bg-white/5 border border-white/10 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Yonathan Wondosen
+              </h3>
+              <p className="text-white/80 font-semibold mb-6">Senior Software Engineer & Full-Stack Developer</p>
+              
+              <div className="space-y-4 text-white/70 leading-relaxed mb-8">
+                <p>
+                  Hi, My Name is Yonathan Wondosen. I'm a senior full-stack
+software engineer based in Ethiopia. I work extensively with
+React/Next.js, TypeScript, Tailwind, Python (Django, Flask),
+Node/Express, SQL and NO-SQL Databases, building efficient,
+scalable, and user-friendly software solutions.
+
+                </p>
+                <p>
+                 In addition to full-stack development, I have hands-on experience
+with DevOps practices, including Docker containerization,
+deploying and managing applications on AWS and VPS
+environments, and implementing CI/CD pipelines using GitHub
+Actions to automate testing, building, and deployment processes.
+                </p>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-3 text-white/70">
+                  <FiMail className="text-white" />
+                  <span className="text-sm">yonathanwondosen@gmail.com</span>
                 </div>
-
-                {/* Journey Content */}
-                <div className="space-y-8 text-slate-300 leading-relaxed">
-                  {/* Technical Expertise */}
-                  <div className="bg-slate-700/30 rounded-2xl p-8 border border-slate-600/30 mt-12">
-                    <div className="flex items-center gap-3 mb-6">
-                      <FiCode className="text-cyan-400 text-2xl" />
-                      <h4 className="font-inter text-xl font-semibold text-white">Technical Expertise</h4>
-                    </div>
-                    <div className="space-y-4">
-                      <p className="font-inter font-normal">
-                        Hello 👋! My name is Yonathan Wondosen. I'm a senior full-stack software developer based in Ethiopia. I work extensively with React.js / TypeScript, Python (Django, Flask), Laravel, Tailwind, SQL and NO-SQL Databases, building efficient, scalable, and user-friendly software solutions.
-                      </p>
-                      <p>
-                        In addition to full-stack development, I have hands-on experience with DevOps practices, including Docker
-                        containerization, deploying and managing applications on AWS EC2 and VPS environments, and implementing CI/CD pipelines using GitHub Actions to automate testing, building, and deployment processes.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Statistics */}
-                  <div className="grid grid-cols-2 gap-6 mt-12 w-full">
-                    {stats.map((stat, index) => (
-                      <div 
-                        key={index}
-                        className="bg-slate-700/30 rounded-xl p-6 text-center border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300"
-                      >
-                        <div className="text-3xl mb-2">{stat.icon}</div>
-                        <div className="font-inter text-2xl font-bold text-cyan-400 mb-1">{stat.value}</div>
-                        <div className="font-inter text-xs text-slate-400 font-normal">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Contact & Social */}
-                  <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-12 pt-8 border-t border-slate-700/50">
-                    {/* Contact Info */}
-                    <div className="flex flex-wrap items-center gap-6 text-sm">
-                      <div className="flex items-center gap-2 text-slate-300">
-                        <FiPhone className="text-cyan-400" />
-                        <span className="font-inter font-normal">+251 914 287 268</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-slate-300">
-                        <FiMail className="text-cyan-400" />
-                        <span className="font-inter font-normal">yonathanwondosen@gmail.com</span>
-                      </div>
-                    </div>
-
-                    {/* Social Links */}
-                    <div className="flex gap-3">
-                      {socialLinks.map((social, index) => (
-                        <a
-                          key={index}
-                          href={social.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 bg-slate-700/50 rounded-xl text-slate-300 hover:text-cyan-400 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300"
-                        >
-                          <social.icon size={18} />
-                        </a>
-                      ))}
-                    </div>
-                  </div>
+                <div className="flex items-center gap-3 text-white/70">
+                  <FiPhone className="text-white" />
+                  <span className="text-sm">+251 914 287 268</span>
                 </div>
+                <div className="flex items-center gap-3 text-white/70">
+                  <FiMapPin className="text-white" />
+                  <span className="text-sm">Addis Ababa, Ethiopia</span>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex gap-3">
+                <a
+                  href="https://github.com/YonathanWondosen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/10 rounded-lg hover:bg-white/15 transition-colors"
+                >
+                  <FiGithub className="text-white" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/yonathan-wondosen-a025bb239/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/10 rounded-lg hover:bg-white/15 transition-colors"
+                >
+                  <FiLinkedin className="text-white" />
+                </a>
               </div>
             </div>
 
-            {/* Skills Section */}
-            <div className="mt-24">
-              <div className="max-w-5xl mx-auto">
-                <div className="text-center mb-12">
-                  <h3 className="font-inter text-3xl font-bold text-white mb-4">My <span className="text-cyan-400">Skills</span></h3>
-                  <p className="font-inter text-slate-400 max-w-2xl mx-auto">
-                    Here are the technologies and tools I work with to build amazing applications and solutions.
-                  </p>
+            {/* Right - Stats */}
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
+              {stats.map((stat, index) => (
+                <div 
+                  key={index}
+                  className="bg-white/5 border border-white/10 rounded-xl p-6 text-center hover:bg-white/[0.07] transition-colors"
+                >
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-xs text-white/60 uppercase tracking-wider">{stat.label}</div>
                 </div>
+              ))}
+            </div>
+          </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                  {skillCategories.flatMap(category => 
-                    category.skills.map((skill, index) => (
-                      <div 
-                        key={`${category.title}-${index}`}
-                        className="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
-                      >
-                        <div className="flex flex-col items-center text-center space-y-2">
-                          {skill.icon && <skill.icon className={`${skill.color} text-2xl`} />}
-                          <span className="font-inter text-sm font-medium text-slate-300">{skill.name}</span>
-                        </div>
-                      </div>
-                    ))
-                  )}
+          {/* Skills Section */}
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-8 text-white">
+              Technical Skills
+            </h3>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
+              {skills.map((skill, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white/5 border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 hover:border-white/20 transition-all group"
+                >
+                  <skill.icon className="text-white text-3xl mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                  <span className="text-xs text-white/80 font-medium">{skill.name}</span>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
