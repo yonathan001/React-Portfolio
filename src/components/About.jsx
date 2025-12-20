@@ -96,13 +96,13 @@ Actions to automate testing, building, and deployment processes.
                 </div>
               </div>
 
-              {/* Social Links */}
               <div className="flex gap-3">
                 <a
                   href="https://github.com/YonathanWondosen"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-white/10 rounded-lg hover:bg-white/15 transition-colors"
+                  aria-label="GitHub Profile"
                 >
                   <FiGithub className="text-white" />
                 </a>
@@ -111,6 +111,7 @@ Actions to automate testing, building, and deployment processes.
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-white/10 rounded-lg hover:bg-white/15 transition-colors"
+                  aria-label="LinkedIn Profile"
                 >
                   <FiLinkedin className="text-white" />
                 </a>

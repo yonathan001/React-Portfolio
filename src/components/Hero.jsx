@@ -32,7 +32,7 @@ const Hero = () => {
           </p>
           
           <p className="text-lg text-white/60 mb-12 max-w-2xl mx-auto">
-            Building scalable applications and intelligent solutions with 4+ years of experience
+            Building scalable applications and intelligent solutions with over 4 years of experience
           </p>
 
           {/* CTA Buttons */}

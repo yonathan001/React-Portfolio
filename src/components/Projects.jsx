@@ -1,5 +1,5 @@
 import { FiExternalLink, FiGithub, FiCode } from 'react-icons/fi'
-import { motion } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 
 const Projects = () => {
   const projects = [
@@ -94,94 +94,121 @@ const Projects = () => {
         {/* Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map(project => (
-            <motion.article
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="group relative rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:border-white/20 transition"
-            >
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover scale-100 group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50" />
-
-                {/* Overlay actions */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-xl bg-white/10 hover:bg-white/20"
-                  >
-                    <FiGithub />
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-xl bg-white/10 hover:bg-white/20"
-                  >
-                    <FiExternalLink />
-                  </a>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-medium tracking-tight">
-                    {project.title}
-                  </h3>
-                  <span className="text-xs text-white/50">{project.year}</span>
-                </div>
-
-                <p className="text-sm text-white/70 leading-relaxed mb-5">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="rounded-lg bg-white/10 px-2.5 py-1 text-xs text-white/80"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Buttons */}
-                <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-white/5 hover:bg-white/10 py-2 text-sm"
-                  >
-                    <FiGithub /> Code
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-white/5 hover:bg-white/10 py-2 text-sm"
-                  >
-                    Demo <FiExternalLink />
-                  </a>
-                </div>
-              </div>
-            </motion.article>
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
     </section>
+  )
+}
+
+const ProjectCard = ({ project }) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const cardRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <article
+      ref={cardRef}
+      className={`group relative rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+      }`}
+    >
+      {/* Image */}
+      <div className="relative h-52 overflow-hidden bg-white/5">
+        <img
+          src={project.image}
+          alt={project.title}
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full object-cover scale-100 group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Overlay actions */}
+        <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-xl bg-white/10 hover:bg-white/20"
+          >
+            <FiGithub />
+          </a>
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-xl bg-white/10 hover:bg-white/20"
+          >
+            <FiExternalLink />
+          </a>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-lg font-medium tracking-tight">
+            {project.title}
+          </h3>
+          <span className="text-xs text-white/50">{project.year}</span>
+        </div>
+
+        <p className="text-sm text-white/70 leading-relaxed mb-5">
+          {project.description}
+        </p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.tags.map((tag, i) => (
+            <span
+              key={i}
+              className="rounded-lg bg-white/10 px-2.5 py-1 text-xs text-white/80"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-white/5 hover:bg-white/10 py-2 text-sm"
+          >
+            <FiGithub /> Code
+          </a>
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-white/5 hover:bg-white/10 py-2 text-sm"
+          >
+            Demo <FiExternalLink />
+          </a>
+        </div>
+      </div>
+    </article>
   )
 }
 

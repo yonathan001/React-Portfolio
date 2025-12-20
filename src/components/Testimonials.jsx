@@ -80,6 +80,8 @@ const Testimonials = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover flex-shrink-0 border border-white/10"
                   />
                   <div className="min-w-0">

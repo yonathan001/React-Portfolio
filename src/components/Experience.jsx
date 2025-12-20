@@ -1,5 +1,5 @@
-import { FiBriefcase, FiCalendar, FiMapPin, FiArrowRight } from 'react-icons/fi'
-import { motion } from 'framer-motion'
+import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi'
+import { useEffect, useRef, useState } from 'react'
 
 const Experience = () => {
   const experiences = [
@@ -71,75 +71,99 @@ const Experience = () => {
 
           <div className="space-y-14">
             {experiences.map(exp => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="relative pl-12 md:pl-24"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-4 top-6 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-black bg-white md:left-8" />
-
-                {/* Card */}
-                <article className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-white/20 hover:bg-white/[0.07]">
-                  {/* Header */}
-                  <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                    <div>
-                      {exp.status && (
-                        <span className="mb-3 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs">
-                          {exp.status}
-                        </span>
-                      )}
-                      <h3 className="mb-1 text-xl font-medium tracking-tight">
-                        {exp.title}
-                      </h3>
-                      <p className="text-lg text-white/80">{exp.company}</p>
-                      <span className="mt-2 inline-block rounded-md bg-white/5 px-2 py-1 text-xs text-white/60">
-                        {exp.type}
-                      </span>
-                    </div>
-
-                    {/* Meta */}
-                    <div className="space-y-2 text-sm text-white/60 lg:text-right">
-                      <div className="flex items-center gap-2 lg:justify-end">
-                        <FiCalendar />
-                        <span>{exp.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2 lg:justify-end">
-                        <FiMapPin />
-                        <span>{exp.location}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="mb-6 text-sm leading-relaxed text-white/70">
-                    {exp.description}
-                  </p>
-
-                  {/* Skills */}
-                  <div>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill, i) => (
-                        <span
-                          key={i}
-                          className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/80 transition hover:bg-white/15"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              </motion.div>
+              <ExperienceCard key={exp.id} exp={exp} />
             ))}
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+const ExperienceCard = ({ exp }) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const cardRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={cardRef}
+      className={`relative pl-12 md:pl-24 transition-all duration-500 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}
+    >
+      {/* Timeline dot */}
+      <div className="absolute left-4 top-6 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-black bg-white md:left-8" />
+
+      {/* Card */}
+      <article className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:border-white/20 hover:bg-white/[0.07]">
+        {/* Header */}
+        <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+          <div>
+            {exp.status && (
+              <span className="mb-3 inline-block rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs">
+                {exp.status}
+              </span>
+            )}
+            <h3 className="mb-1 text-xl font-medium tracking-tight">
+              {exp.title}
+            </h3>
+            <p className="text-lg text-white/80">{exp.company}</p>
+            <span className="mt-2 inline-block rounded-md bg-white/5 px-2 py-1 text-xs text-white/60">
+              {exp.type}
+            </span>
+          </div>
+
+          {/* Meta */}
+          <div className="space-y-2 text-sm text-white/60 lg:text-right">
+            <div className="flex items-center gap-2 lg:justify-end">
+              <FiCalendar />
+              <span>{exp.duration}</span>
+            </div>
+            <div className="flex items-center gap-2 lg:justify-end">
+              <FiMapPin />
+              <span>{exp.location}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="mb-6 text-sm leading-relaxed text-white/70">
+          {exp.description}
+        </p>
+
+        {/* Skills */}
+        <div>
+          <div className="flex flex-wrap gap-2">
+            {exp.skills.map((skill, i) => (
+              <span
+                key={i}
+                className="rounded-lg bg-white/10 px-3 py-1 text-xs text-white/80 transition hover:bg-white/15"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </article>
+    </div>
   )
 }
 

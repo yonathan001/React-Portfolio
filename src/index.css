@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +16,23 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Performance optimizations */
+img {
+  content-visibility: auto;
+}
+
+/* GPU acceleration for smooth animations */
+.group:hover img,
+.animate-scroll {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Reduce paint on scroll */
+section {
+  contain: layout style paint;
 }
 
 body {
